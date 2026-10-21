@@ -882,7 +882,6 @@
         <div class="nav-group">
           <p class="nav-title">API 레퍼런스</p>
           <ul class="nav-list">
-            <li><a href="#endpoints">엔드포인트 목록</a></li>
             <li><a href="#results">추첨결과 조회</a></li>
             <li><a href="#stores">1등 판매점 조회</a></li>
           </ul>
@@ -965,8 +964,11 @@ print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
         </div>
       </section>
 
-      <section id="endpoints" aria-labelledby="endpoints-title">
-        <h2 id="endpoints-title">엔드포인트 목록</h2>
+      <section id="results" aria-labelledby="results-title">
+        <h2 id="results-title">추첨결과 조회</h2>
+        <p>회차별 로또 당첨번호, 1등부터 5등까지의 게임당 당첨금과 당첨 수를 제공합니다.</p>
+
+        <h3>기본 정보</h3>
         <div class="table-wrap">
           <table>
             <thead>
@@ -980,40 +982,21 @@ print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
               <tr>
                 <td><span class="method get">GET</span></td>
                 <td><a href="results/latest.json"><code>/results/latest.json</code></a></td>
-                <td>최신 회차 로또 추첨결과 1건</td>
+                <td>최신 회차 1건</td>
               </tr>
               <tr>
                 <td><span class="method get">GET</span></td>
                 <td><code>/results/{회차}.json</code></td>
-                <td>해당 회차 로또 추첨결과 (예: <a href="results/1190.json"><code>/results/1190.json</code></a>)</td>
+                <td>특정 회차 데이터 (예: <a href="results/1190.json"><code>/results/1190.json</code></a>)</td>
               </tr>
               <tr>
                 <td><span class="method get">GET</span></td>
                 <td><a href="results/all.json"><code>/results/all.json</code></a></td>
-                <td>1회부터 최신 회차까지 전체 로또 당첨번호 배열 (회차 오름차순)</td>
-              </tr>
-              <tr>
-                <td><span class="method get">GET</span></td>
-                <td><code>/stores/{회차}.json</code></td>
-                <td>해당 회차 로또 1등 당첨 판매점 (<strong>262회부터</strong> 제공, 예: <a
-                    href="stores/1190.json"><code>/stores/1190.json</code></a>)</td>
+                <td>전체 회차 데이터 (회차 오름차순 배열)</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="callout info">
-          <span class="callout-title">에러 응답</span>
-          <p>없는 회차를 요청하면 <code>404</code>가 응답됩니다.</p>
-        </div>
-      </section>
-
-      <section id="results" aria-labelledby="results-title">
-        <h2 id="results-title">추첨결과 조회</h2>
-        <p>회차별 로또 당첨번호, 1등부터 5등까지의 게임당 당첨금과 당첨 수를 제공합니다.</p>
-
-        <h3>기본 정보</h3>
-        <div class="endpoint"><span class="method get">GET</span><code>/results/{회차}.json</code></div>
-        <p><code>/results/latest.json</code>은 최신 회차 1건을, <code>/results/all.json</code>은 아래 객체의 배열을 돌려줍니다.</p>
 
         <h3>요청</h3>
         <h4>경로 파라미터</h4>
@@ -1030,7 +1013,7 @@ print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
               <tr>
                 <td><code>회차</code><span class="req">필수</span></td>
                 <td class="type">number</td>
-                <td>조회할 회차 (1 ~ 최신 회차)</td>
+                <td><code>/results/{회차}.json</code>에서 조회할 회차 (1 ~ 최신 회차)</td>
               </tr>
             </tbody>
           </table>
