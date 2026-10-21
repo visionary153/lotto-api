@@ -87,6 +87,7 @@
       --warn-bg: #fff8e6;
       --warn-border: #f5a524;
       --header-h: 60px;
+      --latest-h: 44px;
     }
 
     * {
@@ -357,12 +358,6 @@
       border-top: 0;
     }
 
-    .content>section.latest {
-      border-top: 0;
-      padding-top: 0;
-      margin-top: 32px;
-    }
-
     .lead {
       font-size: 17.5px;
       color: var(--text-2);
@@ -574,32 +569,55 @@
       margin: 0;
     }
 
-    /* ── 최신 당첨번호 카드 (scripts/page.mjs가 갱신) ── */
-    .card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px 26px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 4px 16px rgba(0, 0, 0, .04);
+    /* ── 최신 당첨번호 띠 배너 (scripts/page.mjs가 갱신) ── */
+    .latest {
+      height: var(--latest-h);
+      background: #fffbeb;
+      border-bottom: 1px solid #f3e3a6;
+      font-size: 14px;
+      overflow: hidden;
     }
 
-    .latest h2 {
-      margin-bottom: 2px;
-      font-size: 23px;
+    .latest-inner {
+      height: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      white-space: nowrap;
     }
 
-    .latest .date {
+    .latest p {
+      margin: 0;
+      color: var(--text-2);
+    }
+
+    .latest-date {
       color: var(--muted);
-      font-size: 15px;
-      margin: 0 0 18px;
+      margin-left: 6px;
+    }
+
+    .latest-prize {
+      padding-left: 16px;
+      border-left: 1px solid #ecd98f;
+    }
+
+    .latest-link {
+      margin-left: auto;
+      font-size: 13px;
+    }
+
+    .latest-link::after {
+      content: " →";
     }
 
     .balls {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 0 0 20px;
+      gap: 5px;
+      margin: 0;
       padding: 0;
       list-style: none;
     }
@@ -609,17 +627,17 @@
     }
 
     .ball {
-      width: 44px;
-      height: 44px;
+      width: 28px;
+      height: 28px;
       border-radius: 50%;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: #fff;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 13px;
       text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
-      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .08);
+      box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .08);
     }
 
     .b1 {
@@ -645,27 +663,8 @@
     .plus {
       color: var(--muted);
       font-weight: 700;
-      font-size: 20px;
-      margin: 0 2px;
-    }
-
-    .latest dl {
-      display: grid;
-      grid-template-columns: max-content 1fr;
-      gap: 8px 20px;
-      margin: 0;
-      padding-top: 16px;
-      border-top: 1px dashed var(--border);
-      font-size: 15.5px;
-    }
-
-    .latest dt {
-      color: var(--muted);
-    }
-
-    .latest dd {
-      margin: 0;
-      font-weight: 700;
+      font-size: 15px;
+      margin: 0 1px;
     }
 
     /* ── FAQ ── */
@@ -746,7 +745,7 @@
 
       .sidebar {
         position: fixed;
-        top: var(--header-h);
+        top: var(--nav-top, var(--header-h));
         left: 0;
         bottom: 0;
         z-index: 25;
@@ -764,7 +763,7 @@
       body.nav-open .backdrop {
         display: block;
         position: fixed;
-        inset: var(--header-h) 0 0 0;
+        inset: var(--nav-top, var(--header-h)) 0 0 0;
         z-index: 20;
         background: rgba(0, 0, 0, .25);
       }
@@ -801,14 +800,15 @@
         margin-top: 40px;
       }
 
-      .card {
-        padding: 18px;
+      .latest-inner {
+        padding: 0 16px;
+        gap: 12px;
       }
 
-      .ball {
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
+      .latest-date,
+      .latest-prize,
+      .latest-link {
+        display: none;
       }
 
       th,
@@ -819,19 +819,39 @@
 
     @media (max-width: 400px) {
       .balls {
-        gap: 5px;
+        gap: 3px;
       }
 
       .ball {
-        width: 32px;
-        height: 32px;
-        font-size: 14px;
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
       }
     }
   </style>
 </head>
 
 <body>
+  <!-- latest:start -->
+  <section id="latest" class="latest" aria-label="로또 1246회 당첨번호">
+    <div class="latest-inner">
+      <p class="latest-title"><strong>로또 1246회 당첨번호</strong> <span class="latest-date">2026-10-17 추첨</span></p>
+      <ul class="balls" aria-label="16, 22, 23, 24, 27, 28 + 보너스 6">
+        <li class="ball b2">16</li>
+        <li class="ball b3">22</li>
+        <li class="ball b3">23</li>
+        <li class="ball b3">24</li>
+        <li class="ball b3">27</li>
+        <li class="ball b3">28</li>
+        <li class="plus" aria-hidden="true">+</li>
+        <li class="ball b1">6</li>
+      </ul>
+      <p class="latest-prize">1등 <strong>1,881,025,430원 (16게임)</strong></p>
+      <a class="latest-link" href="results/latest.json">latest.json</a>
+    </div>
+  </section>
+  <!-- latest:end -->
+
   <header class="topbar">
     <div class="topbar-inner">
       <button class="menu-btn" type="button" aria-label="목차 열기" aria-controls="sidebar" aria-expanded="false">
@@ -856,7 +876,6 @@
           <p class="nav-title">시작하기</p>
           <ul class="nav-list">
             <li><a href="#overview">개요</a></li>
-            <li><a href="#latest">최신 당첨번호</a></li>
             <li><a href="#quick-start">빠른 시작</a></li>
           </ul>
         </div>
@@ -923,29 +942,6 @@
         </div>
       </section>
 
-      <!-- latest:start -->
-    <section id="latest" class="latest" aria-labelledby="latest-title">
-      <div class="card">
-        <h2 id="latest-title">로또 1246회 당첨번호</h2>
-        <p class="date">2026-10-17 추첨 · 이 데이터는 <a href="results/latest.json"><code>/results/latest.json</code></a>으로 받을 수 있습니다.</p>
-        <ul class="balls" aria-label="16, 22, 23, 24, 27, 28 + 보너스 6">
-          <li class="ball b2">16</li>
-          <li class="ball b3">22</li>
-          <li class="ball b3">23</li>
-          <li class="ball b3">24</li>
-          <li class="ball b3">27</li>
-          <li class="ball b3">28</li>
-          <li class="plus" aria-hidden="true">+</li>
-          <li class="ball b1">6</li>
-        </ul>
-        <dl>
-          <dt>1등 당첨금</dt><dd>1,881,025,430원 (16게임)</dd>
-          <dt>2등 당첨금</dt><dd>78,376,060원 (64게임)</dd>
-          <dt>총 판매금액</dt><dd>60,928,553,620원</dd>
-        </dl>
-      </div>
-    </section>
-    <!-- latest:end -->
 
       <section id="quick-start" aria-labelledby="quick-start-title">
         <h2 id="quick-start-title">빠른 시작</h2>
@@ -1306,7 +1302,11 @@ print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
       // 모바일 사이드바 토글
       const body = document.body;
       const btn = document.querySelector('.menu-btn');
-      const setOpen = (open) => { body.classList.toggle('nav-open', open); btn.setAttribute('aria-expanded', String(open)); };
+      // 상단 당첨번호 띠가 보이는 동안에는 상단바 위치가 내려가므로 서랍 시작 위치를 맞춘다
+      const topbar = document.querySelector('.topbar');
+      const placeNav = () => document.documentElement.style.setProperty('--nav-top', `${Math.max(0, topbar.getBoundingClientRect().bottom)}px`);
+      addEventListener('scroll', () => body.classList.contains('nav-open') && placeNav(), { passive: true });
+      const setOpen = (open) => { if (open) placeNav(); body.classList.toggle('nav-open', open); btn.setAttribute('aria-expanded', String(open)); };
       btn.addEventListener('click', () => setOpen(!body.classList.contains('nav-open')));
       document.querySelector('.backdrop').addEventListener('click', () => setOpen(false));
       document.querySelectorAll('.sidebar a').forEach((a) => a.addEventListener('click', () => setOpen(false)));

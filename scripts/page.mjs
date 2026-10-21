@@ -22,23 +22,19 @@ function renderLatest(d) {
   const firstText = first.winners > 0 ? `${won(first.prize)} (${first.winners}게임)` : '당첨자 없음';
   const numbersText = `${d.numbers.join(', ')} + 보너스 ${d.bonus}`;
   return `${START}
-    <section id="latest" class="latest" aria-labelledby="latest-title">
-      <div class="card">
-        <h2 id="latest-title">로또 ${d.round}회 당첨번호</h2>
-        <p class="date">${d.date} 추첨 · 이 데이터는 <a href="results/latest.json"><code>/results/latest.json</code></a>으로 받을 수 있습니다.</p>
-        <ul class="balls" aria-label="${numbersText}">
-          ${d.numbers.map(ball).join('\n          ')}
-          <li class="plus" aria-hidden="true">+</li>
-          ${ball(d.bonus)}
-        </ul>
-        <dl>
-          <dt>1등 당첨금</dt><dd>${firstText}</dd>
-          <dt>2등 당첨금</dt><dd>${won(d.ranks[1].prize)} (${d.ranks[1].winners}게임)</dd>
-          <dt>총 판매금액</dt><dd>${won(d.totalSales)}</dd>
-        </dl>
-      </div>
-    </section>
-    ${END}`;
+  <section id="latest" class="latest" aria-label="로또 ${d.round}회 당첨번호">
+    <div class="latest-inner">
+      <p class="latest-title"><strong>로또 ${d.round}회 당첨번호</strong> <span class="latest-date">${d.date} 추첨</span></p>
+      <ul class="balls" aria-label="${numbersText}">
+        ${d.numbers.map(ball).join('\n        ')}
+        <li class="plus" aria-hidden="true">+</li>
+        ${ball(d.bonus)}
+      </ul>
+      <p class="latest-prize">1등 <strong>${firstText}</strong></p>
+      <a class="latest-link" href="results/latest.json">latest.json</a>
+    </div>
+  </section>
+  ${END}`;
 }
 
 /** 내용이 바뀐 파일 경로 목록을 돌려준다 */
