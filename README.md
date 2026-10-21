@@ -20,19 +20,6 @@
 curl https://visionary153.github.io/lotto-api/results/latest.json
 ```
 
-```js
-const res = await fetch('https://visionary153.github.io/lotto-api/results/latest.json');
-const draw = await res.json();
-console.log(`${draw.round}회 (${draw.date}) 당첨번호: ${draw.numbers.join(', ')} + ${draw.bonus}`);
-```
-
-```python
-import requests
-
-draw = requests.get('https://visionary153.github.io/lotto-api/results/latest.json').json()
-print(draw['round'], draw['numbers'], draw['bonus'])
-```
-
 ## 추첨결과 조회
 
 회차별 로또 당첨번호, 1등부터 5등까지의 게임당 당첨금과 당첨 수를 제공합니다.
@@ -64,11 +51,7 @@ print(draw['round'], draw['numbers'], draw['bonus'])
 | `firstPrizeMethods` | object \| null | 1등 당첨 게임의 번호 선택 방식별 개수 (`auto` 자동 / `manual` 수동 / `semiAuto` 반자동). 원본에 기록이 없는 **1~261회는 `null`** |
 | `totalSales` | number | 해당 회차 총 판매금액 (원) |
 
-### 예제
-
-```sh
-curl https://visionary153.github.io/lotto-api/results/1190.json
-```
+### 응답 예시
 
 ```json
 {
@@ -116,15 +99,9 @@ curl https://visionary153.github.io/lotto-api/results/1190.json
 | `stores[].lat` | number \| `""` | 위도 |
 | `stores[].lng` | number \| `""` | 경도 |
 
-> [!NOTE]
-> - 한 판매점에서 1등이 여러 게임 나오면 같은 판매점이 여러 번 들어갑니다.
 > - 현재 **정상 영업 중인 판매점만** 포함합니다.
 
-### 예제
-
-```sh
-curl https://visionary153.github.io/lotto-api/stores/1190.json
-```
+### 응답 예시
 
 ```json
 {
