@@ -1,0 +1,46 @@
+{
+  "round": 978,
+  "date": "2021-08-28",
+  "numbers": [
+    1,
+    7,
+    15,
+    32,
+    34,
+    42
+  ],
+  "bonus": 8,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2373391388,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 56509319,
+      "winners": 70
+    },
+    {
+      "rank": 3,
+      "prize": 1399736,
+      "winners": 2826
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 133915
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2217326
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 5,
+    "semiAuto": 0
+  },
+  "totalSales": 49427598500
+}

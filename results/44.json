@@ -1,0 +1,42 @@
+{
+  "round": 44,
+  "date": "2003-10-04",
+  "numbers": [
+    3,
+    11,
+    21,
+    30,
+    38,
+    45
+  ],
+  "bonus": 39,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3362155800,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 121817200,
+      "winners": 23
+    },
+    {
+      "rank": 3,
+      "prize": 3569100,
+      "winners": 785
+    },
+    {
+      "rank": 4,
+      "prize": 139700,
+      "winners": 40092
+    },
+    {
+      "rank": 5,
+      "prize": 10000,
+      "winners": 696051
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 69956950000
+}

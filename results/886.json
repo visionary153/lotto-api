@@ -1,0 +1,46 @@
+{
+  "round": 886,
+  "date": "2019-11-23",
+  "numbers": [
+    19,
+    23,
+    28,
+    37,
+    42,
+    45
+  ],
+  "bonus": 2,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2974643786,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 58820640,
+      "winners": 59
+    },
+    {
+      "rank": 3,
+      "prize": 1621691,
+      "winners": 2140
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 109766
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1768281
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 6,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 42093047000
+}

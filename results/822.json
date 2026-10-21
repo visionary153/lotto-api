@@ -1,0 +1,46 @@
+{
+  "round": 822,
+  "date": "2018-09-01",
+  "numbers": [
+    9,
+    18,
+    20,
+    24,
+    27,
+    36
+  ],
+  "bonus": 12,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 5930898625,
+      "winners": 3
+    },
+    {
+      "rank": 2,
+      "prize": 37537334,
+      "winners": 79
+    },
+    {
+      "rank": 3,
+      "prize": 1377357,
+      "winners": 2153
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 108789
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1735565
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 1,
+    "manual": 1,
+    "semiAuto": 1
+  },
+  "totalSales": 37840869500
+}

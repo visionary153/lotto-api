@@ -1,0 +1,46 @@
+{
+  "round": 869,
+  "date": "2019-07-27",
+  "numbers": [
+    2,
+    6,
+    20,
+    27,
+    37,
+    39
+  ],
+  "bonus": 4,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1922582588,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 57219720,
+      "winners": 56
+    },
+    {
+      "rank": 3,
+      "prize": 1449912,
+      "winners": 2210
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 108562
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1814332
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 40134194500
+}

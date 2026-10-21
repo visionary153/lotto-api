@@ -1,0 +1,46 @@
+{
+  "round": 626,
+  "date": "2014-11-29",
+  "numbers": [
+    13,
+    14,
+    26,
+    33,
+    40,
+    43
+  ],
+  "bonus": 15,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1717871110,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 50899885,
+      "winners": 45
+    },
+    {
+      "rank": 3,
+      "prize": 1296996,
+      "winners": 1766
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 86261
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1371217
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 29493093500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 1239,
+  "date": "2026-08-29",
+  "numbers": [
+    11,
+    13,
+    22,
+    32,
+    33,
+    36
+  ],
+  "bonus": 8,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2214789375,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 67587470,
+      "winners": 71
+    },
+    {
+      "rank": 3,
+      "prize": 1557518,
+      "winners": 3081
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 152825
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2570542
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 10,
+    "manual": 2,
+    "semiAuto": 1
+  },
+  "totalSales": 58883645203
+}

@@ -1,0 +1,46 @@
+{
+  "round": 834,
+  "date": "2018-11-24",
+  "numbers": [
+    6,
+    8,
+    18,
+    35,
+    42,
+    43
+  ],
+  "bonus": 3,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1690693671,
+      "winners": 11
+    },
+    {
+      "rank": 2,
+      "prize": 65949044,
+      "winners": 47
+    },
+    {
+      "rank": 3,
+      "prize": 1575804,
+      "winners": 1967
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 99132
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1643491
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 37970895500
+}

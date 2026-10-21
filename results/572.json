@@ -1,0 +1,46 @@
+{
+  "round": 572,
+  "date": "2013-11-16",
+  "numbers": [
+    3,
+    13,
+    18,
+    33,
+    37,
+    45
+  ],
+  "bonus": 1,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1668216188,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 41967703,
+      "winners": 53
+    },
+    {
+      "rank": 3,
+      "prize": 1282750,
+      "winners": 1734
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 81361
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1274889
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 28236801000
+}

@@ -1,0 +1,46 @@
+{
+  "round": 506,
+  "date": "2012-08-11",
+  "numbers": [
+    6,
+    9,
+    11,
+    22,
+    24,
+    30
+  ],
+  "bonus": 31,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 4073333875,
+      "winners": 3
+    },
+    {
+      "rank": 2,
+      "prize": 61717180,
+      "winners": 33
+    },
+    {
+      "rank": 3,
+      "prize": 1282536,
+      "winners": 1588
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 75289
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1224774
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 2,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 26181655500
+}

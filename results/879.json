@@ -1,0 +1,46 @@
+{
+  "round": 879,
+  "date": "2019-10-05",
+  "numbers": [
+    1,
+    4,
+    10,
+    14,
+    15,
+    35
+  ],
+  "bonus": 20,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3206361313,
+      "winners": 6
+    },
+    {
+      "rank": 2,
+      "prize": 41641057,
+      "winners": 77
+    },
+    {
+      "rank": 3,
+      "prize": 1236069,
+      "winners": 2594
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 123497
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1952277
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 41587125500
+}

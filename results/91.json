@@ -1,0 +1,42 @@
+{
+  "round": 91,
+  "date": "2004-08-28",
+  "numbers": [
+    1,
+    21,
+    24,
+    26,
+    29,
+    42
+  ],
+  "bonus": 27,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3582902400,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 74643800,
+      "winners": 32
+    },
+    {
+      "rank": 3,
+      "prize": 1982242,
+      "winners": 1205
+    },
+    {
+      "rank": 4,
+      "prize": 74431,
+      "winners": 64183
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1128902
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 59061052000
+}

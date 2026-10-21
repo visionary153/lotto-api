@@ -1,0 +1,46 @@
+{
+  "round": 684,
+  "date": "2016-01-09",
+  "numbers": [
+    1,
+    11,
+    15,
+    17,
+    25,
+    39
+  ],
+  "bonus": 40,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1688815709,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 40858445,
+      "winners": 62
+    },
+    {
+      "rank": 3,
+      "prize": 1287208,
+      "winners": 1968
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 98607
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1623161
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 33311943500
+}

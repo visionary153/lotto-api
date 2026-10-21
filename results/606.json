@@ -1,0 +1,46 @@
+{
+  "round": 606,
+  "date": "2014-07-12",
+  "numbers": [
+    1,
+    5,
+    6,
+    14,
+    20,
+    39
+  ],
+  "bonus": 22,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1311566850,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 49680563,
+      "winners": 44
+    },
+    {
+      "rank": 3,
+      "prize": 1417604,
+      "winners": 1542
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 82879
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1366588
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 28464448000
+}

@@ -1,0 +1,46 @@
+{
+  "round": 757,
+  "date": "2017-06-03",
+  "numbers": [
+    6,
+    7,
+    11,
+    17,
+    33,
+    44
+  ],
+  "bonus": 1,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 739839858,
+      "winners": 21
+    },
+    {
+      "rank": 2,
+      "prize": 38079993,
+      "winners": 68
+    },
+    {
+      "rank": 3,
+      "prize": 974573,
+      "winners": 2657
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 117353
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1788667
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 11,
+    "manual": 9,
+    "semiAuto": 1
+  },
+  "totalSales": 35526501000
+}

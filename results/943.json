@@ -1,0 +1,46 @@
+{
+  "round": 943,
+  "date": "2020-12-26",
+  "numbers": [
+    1,
+    8,
+    13,
+    36,
+    44,
+    45
+  ],
+  "bonus": 39,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3435045108,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 54156117,
+      "winners": 74
+    },
+    {
+      "rank": 3,
+      "prize": 1472283,
+      "winners": 2722
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 135763
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2238429
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 50040716000
+}

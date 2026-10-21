@@ -1,0 +1,46 @@
+{
+  "round": 735,
+  "date": "2016-12-31",
+  "numbers": [
+    5,
+    10,
+    13,
+    27,
+    37,
+    41
+  ],
+  "bonus": 4,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1847231588,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 61574387,
+      "winners": 50
+    },
+    {
+      "rank": 3,
+      "prize": 1356862,
+      "winners": 2269
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 107013
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1752740
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 38744104500
+}

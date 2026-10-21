@@ -1,0 +1,46 @@
+{
+  "round": 1098,
+  "date": "2023-12-16",
+  "numbers": [
+    12,
+    16,
+    21,
+    24,
+    41,
+    43
+  ],
+  "bonus": 15,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1930461895,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 61509816,
+      "winners": 68
+    },
+    {
+      "rank": 3,
+      "prize": 1472771,
+      "winners": 2840
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 138090
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2311866
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 51925169500
+}

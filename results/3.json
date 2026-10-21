@@ -1,0 +1,42 @@
+{
+  "round": 3,
+  "date": "2002-12-21",
+  "numbers": [
+    11,
+    16,
+    19,
+    21,
+    27,
+    31
+  ],
+  "bonus": 30,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2000000000,
+      "winners": 1
+    },
+    {
+      "rank": 2,
+      "prize": 0,
+      "winners": 0
+    },
+    {
+      "rank": 3,
+      "prize": 1174100,
+      "winners": 139
+    },
+    {
+      "rank": 4,
+      "prize": 54900,
+      "winners": 5940
+    },
+    {
+      "rank": 5,
+      "prize": 10000,
+      "winners": 73256
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 4729342000
+}

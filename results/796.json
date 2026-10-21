@@ -1,0 +1,46 @@
+{
+  "round": 796,
+  "date": "2018-03-03",
+  "numbers": [
+    1,
+    21,
+    26,
+    36,
+    40,
+    41
+  ],
+  "bonus": 5,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2763490340,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 70088524,
+      "winners": 46
+    },
+    {
+      "rank": 3,
+      "prize": 1678331,
+      "winners": 1921
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 96701
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1643069
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 38842971500
+}

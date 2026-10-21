@@ -1,0 +1,46 @@
+{
+  "round": 972,
+  "date": "2021-07-17",
+  "numbers": [
+    3,
+    6,
+    17,
+    23,
+    37,
+    39
+  ],
+  "bonus": 26,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1124886244,
+      "winners": 20
+    },
+    {
+      "rank": 2,
+      "prize": 46870261,
+      "winners": 80
+    },
+    {
+      "rank": 3,
+      "prize": 1458997,
+      "winners": 2570
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 126989
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2122398
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 16,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 46958406500
+}

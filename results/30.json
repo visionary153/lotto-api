@@ -1,0 +1,42 @@
+{
+  "round": 30,
+  "date": "2003-06-28",
+  "numbers": [
+    8,
+    17,
+    20,
+    35,
+    36,
+    44
+  ],
+  "bonus": 4,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 8728555500,
+      "winners": 2
+    },
+    {
+      "rank": 2,
+      "prize": 132250800,
+      "winners": 22
+    },
+    {
+      "rank": 3,
+      "prize": 3336600,
+      "winners": 872
+    },
+    {
+      "rank": 4,
+      "prize": 137500,
+      "winners": 42319
+    },
+    {
+      "rank": 5,
+      "prize": 10000,
+      "winners": 710466
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 72399690000
+}

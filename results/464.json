@@ -1,0 +1,46 @@
+{
+  "round": 464,
+  "date": "2011-10-22",
+  "numbers": [
+    6,
+    12,
+    15,
+    34,
+    42,
+    44
+  ],
+  "bonus": 4,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3355721106,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 67273025,
+      "winners": 78
+    },
+    {
+      "rank": 3,
+      "prize": 1668457,
+      "winners": 3145
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 159899
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2682564
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 10,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 63386137000
+}

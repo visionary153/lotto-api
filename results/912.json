@@ -1,0 +1,46 @@
+{
+  "round": 912,
+  "date": "2020-05-23",
+  "numbers": [
+    5,
+    8,
+    18,
+    21,
+    22,
+    38
+  ],
+  "bonus": 10,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1493500581,
+      "winners": 14
+    },
+    {
+      "rank": 2,
+      "prize": 49783353,
+      "winners": 70
+    },
+    {
+      "rank": 3,
+      "prize": 1368212,
+      "winners": 2547
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 125332
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2030860
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 5,
+    "semiAuto": 2
+  },
+  "totalSales": 44299577500
+}

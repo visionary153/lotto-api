@@ -1,0 +1,42 @@
+{
+  "round": 98,
+  "date": "2004-10-16",
+  "numbers": [
+    6,
+    9,
+    16,
+    23,
+    24,
+    32
+  ],
+  "bonus": 43,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3177972300,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 47081072,
+      "winners": 45
+    },
+    {
+      "rank": 3,
+      "prize": 1126941,
+      "winners": 1880
+    },
+    {
+      "rank": 4,
+      "prize": 48251,
+      "winners": 87818
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1385812
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 56231084000
+}

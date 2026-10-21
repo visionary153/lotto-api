@@ -1,0 +1,46 @@
+{
+  "round": 788,
+  "date": "2018-01-06",
+  "numbers": [
+    2,
+    10,
+    11,
+    19,
+    35,
+    39
+  ],
+  "bonus": 29,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1401475154,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 43378993,
+      "winners": 70
+    },
+    {
+      "rank": 3,
+      "prize": 1345384,
+      "winners": 2257
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 112504
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1828701
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 6,
+    "semiAuto": 0
+  },
+  "totalSales": 39060941000
+}

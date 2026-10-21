@@ -1,0 +1,46 @@
+{
+  "round": 393,
+  "date": "2010-06-12",
+  "numbers": [
+    9,
+    16,
+    28,
+    40,
+    41,
+    43
+  ],
+  "bonus": 21,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1362003975,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 51885866,
+      "winners": 35
+    },
+    {
+      "rank": 3,
+      "prize": 1694035,
+      "winners": 1072
+    },
+    {
+      "rank": 4,
+      "prize": 64915,
+      "winners": 55951
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 966901
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 6,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 22994558000
+}

@@ -1,0 +1,42 @@
+{
+  "round": 83,
+  "date": "2004-07-03",
+  "numbers": [
+    6,
+    10,
+    15,
+    17,
+    19,
+    34
+  ],
+  "bonus": 14,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 7086948300,
+      "winners": 2
+    },
+    {
+      "rank": 2,
+      "prize": 157487740,
+      "winners": 15
+    },
+    {
+      "rank": 3,
+      "prize": 2775930,
+      "winners": 851
+    },
+    {
+      "rank": 4,
+      "prize": 102880,
+      "winners": 45924
+    },
+    {
+      "rank": 5,
+      "prize": 10000,
+      "winners": 763287
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 62512062000
+}

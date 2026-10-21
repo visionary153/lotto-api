@@ -1,0 +1,46 @@
+{
+  "round": 945,
+  "date": "2021-01-09",
+  "numbers": [
+    9,
+    10,
+    15,
+    30,
+    33,
+    37
+  ],
+  "bonus": 26,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1765554491,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 53878424,
+      "winners": 71
+    },
+    {
+      "rank": 3,
+      "prize": 1536293,
+      "winners": 2490
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 124224
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2120882
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 10,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 47418554500
+}

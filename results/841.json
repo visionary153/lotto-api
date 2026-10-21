@@ -1,0 +1,46 @@
+{
+  "round": 841,
+  "date": "2019-01-12",
+  "numbers": [
+    5,
+    11,
+    14,
+    30,
+    33,
+    38
+  ],
+  "bonus": 24,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1116095714,
+      "winners": 17
+    },
+    {
+      "rank": 2,
+      "prize": 35934900,
+      "winners": 88
+    },
+    {
+      "rank": 3,
+      "prize": 1269989,
+      "winners": 2490
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 119648
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1901965
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 8,
+    "semiAuto": 0
+  },
+  "totalSales": 40790394500
+}

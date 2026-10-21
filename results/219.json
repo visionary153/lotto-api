@@ -1,0 +1,42 @@
+{
+  "round": 219,
+  "date": "2007-02-10",
+  "numbers": [
+    4,
+    11,
+    20,
+    26,
+    35,
+    37
+  ],
+  "bonus": 16,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1208409167,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 44210092,
+      "winners": 41
+    },
+    {
+      "rank": 3,
+      "prize": 1402952,
+      "winners": 1292
+    },
+    {
+      "rank": 4,
+      "prize": 56743,
+      "winners": 63889
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1065147
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 46903745000
+}

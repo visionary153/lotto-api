@@ -1,0 +1,42 @@
+{
+  "round": 131,
+  "date": "2005-06-04",
+  "numbers": [
+    8,
+    10,
+    11,
+    14,
+    15,
+    21
+  ],
+  "bonus": 37,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1451214488,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 58634929,
+      "winners": 33
+    },
+    {
+      "rank": 3,
+      "prize": 1176264,
+      "winners": 1645
+    },
+    {
+      "rank": 4,
+      "prize": 52372,
+      "winners": 73893
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1153272
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 50231773000
+}

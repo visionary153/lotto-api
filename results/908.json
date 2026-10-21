@@ -1,0 +1,46 @@
+{
+  "round": 908,
+  "date": "2020-04-25",
+  "numbers": [
+    3,
+    16,
+    21,
+    22,
+    23,
+    44
+  ],
+  "bonus": 30,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2834856141,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 66312425,
+      "winners": 57
+    },
+    {
+      "rank": 3,
+      "prize": 1749102,
+      "winners": 2161
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 108610
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1858567
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 6,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 44961800500
+}

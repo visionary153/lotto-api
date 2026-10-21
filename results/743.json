@@ -1,0 +1,46 @@
+{
+  "round": 743,
+  "date": "2017-02-25",
+  "numbers": [
+    15,
+    19,
+    21,
+    34,
+    41,
+    44
+  ],
+  "bonus": 10,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2608641000,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 66161185,
+      "winners": 46
+    },
+    {
+      "rank": 3,
+      "prize": 1535527,
+      "winners": 1982
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 91886
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1555362
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 36718426000
+}

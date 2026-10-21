@@ -1,0 +1,42 @@
+{
+  "round": 203,
+  "date": "2006-10-21",
+  "numbers": [
+    1,
+    3,
+    11,
+    24,
+    30,
+    32
+  ],
+  "bonus": 7,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2164564740,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 41948930,
+      "winners": 43
+    },
+    {
+      "rank": 3,
+      "prize": 1358287,
+      "winners": 1328
+    },
+    {
+      "rank": 4,
+      "prize": 53913,
+      "winners": 66916
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1095728
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 47033359000
+}

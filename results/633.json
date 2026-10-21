@@ -1,0 +1,46 @@
+{
+  "round": 633,
+  "date": "2015-01-17",
+  "numbers": [
+    9,
+    12,
+    19,
+    20,
+    39,
+    41
+  ],
+  "bonus": 13,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1217257094,
+      "winners": 12
+    },
+    {
+      "rank": 2,
+      "prize": 51798175,
+      "winners": 47
+    },
+    {
+      "rank": 3,
+      "prize": 1360825,
+      "winners": 1789
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 87613
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1430227
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 31007898500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 330,
+  "date": "2009-03-28",
+  "numbers": [
+    3,
+    4,
+    16,
+    17,
+    19,
+    20
+  ],
+  "bonus": 23,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1162280200,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 54481885,
+      "winners": 32
+    },
+    {
+      "rank": 3,
+      "prize": 1218324,
+      "winners": 1431
+    },
+    {
+      "rank": 4,
+      "prize": 50370,
+      "winners": 69225
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1099109
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 3,
+    "manual": 6,
+    "semiAuto": 0
+  },
+  "totalSales": 22929748000
+}

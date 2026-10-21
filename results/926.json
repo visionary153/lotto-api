@@ -1,0 +1,46 @@
+{
+  "round": 926,
+  "date": "2020-08-29",
+  "numbers": [
+    10,
+    16,
+    18,
+    20,
+    25,
+    31
+  ],
+  "bonus": 6,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2032490663,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 47048395,
+      "winners": 72
+    },
+    {
+      "rank": 3,
+      "prize": 1158907,
+      "winners": 2923
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 133167
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2085580
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 7,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 44186125500
+}

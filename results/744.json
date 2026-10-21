@@ -1,0 +1,46 @@
+{
+  "round": 744,
+  "date": "2017-03-04",
+  "numbers": [
+    10,
+    15,
+    18,
+    21,
+    34,
+    41
+  ],
+  "bonus": 43,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1155411575,
+      "winners": 15
+    },
+    {
+      "rank": 2,
+      "prize": 47352934,
+      "winners": 61
+    },
+    {
+      "rank": 3,
+      "prize": 1039414,
+      "winners": 2779
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 109229
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1636793
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 7,
+    "semiAuto": 0
+  },
+  "totalSales": 36753646500
+}

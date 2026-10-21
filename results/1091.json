@@ -1,0 +1,46 @@
+{
+  "round": 1091,
+  "date": "2023-10-28",
+  "numbers": [
+    6,
+    20,
+    23,
+    24,
+    28,
+    30
+  ],
+  "bonus": 44,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2898470459,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 66887780,
+      "winners": 65
+    },
+    {
+      "rank": 3,
+      "prize": 1513299,
+      "winners": 2873
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 149578
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2481449
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 54667790500
+}

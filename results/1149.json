@@ -1,0 +1,46 @@
+{
+  "round": 1149,
+  "date": "2024-12-07",
+  "numbers": [
+    8,
+    15,
+    19,
+    21,
+    32,
+    36
+  ],
+  "bonus": 38,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1613380765,
+      "winners": 17
+    },
+    {
+      "rank": 2,
+      "prize": 61773588,
+      "winners": 74
+    },
+    {
+      "rank": 3,
+      "prize": 1563354,
+      "winners": 2924
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 145209
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2448589
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 8,
+    "semiAuto": 1
+  },
+  "totalSales": 56073359000
+}

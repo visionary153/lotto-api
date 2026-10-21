@@ -1,0 +1,42 @@
+{
+  "round": 207,
+  "date": "2006-11-18",
+  "numbers": [
+    3,
+    11,
+    14,
+    31,
+    32,
+    37
+  ],
+  "bonus": 38,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2104673760,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 47402563,
+      "winners": 37
+    },
+    {
+      "rank": 3,
+      "prize": 1457935,
+      "winners": 1203
+    },
+    {
+      "rank": 4,
+      "prize": 57627,
+      "winners": 60871
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1020444
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 45282336000
+}

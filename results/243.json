@@ -1,0 +1,42 @@
+{
+  "round": 243,
+  "date": "2007-07-28",
+  "numbers": [
+    2,
+    12,
+    17,
+    19,
+    28,
+    42
+  ],
+  "bonus": 34,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2408850000,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 55375863,
+      "winners": 29
+    },
+    {
+      "rank": 3,
+      "prize": 1474656,
+      "winners": 1089
+    },
+    {
+      "rank": 4,
+      "prize": 59418,
+      "winners": 54055
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 918683
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 41304830000
+}

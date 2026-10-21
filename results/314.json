@@ -1,0 +1,46 @@
+{
+  "round": 314,
+  "date": "2008-12-06",
+  "numbers": [
+    15,
+    17,
+    19,
+    34,
+    38,
+    41
+  ],
+  "bonus": 2,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1660512200,
+      "winners": 6
+    },
+    {
+      "rank": 2,
+      "prize": 69188009,
+      "winners": 24
+    },
+    {
+      "rank": 3,
+      "prize": 1556244,
+      "winners": 1067
+    },
+    {
+      "rank": 4,
+      "prize": 60502,
+      "winners": 54892
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 911785
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 21164047000
+}

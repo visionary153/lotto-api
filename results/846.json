@@ -1,0 +1,46 @@
+{
+  "round": 846,
+  "date": "2019-02-16",
+  "numbers": [
+    5,
+    18,
+    30,
+    41,
+    43,
+    45
+  ],
+  "bonus": 13,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1596884395,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 50143713,
+      "winners": 69
+    },
+    {
+      "rank": 3,
+      "prize": 1732557,
+      "winners": 1997
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 106009
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1797728
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 4,
+    "semiAuto": 1
+  },
+  "totalSales": 41968419500
+}

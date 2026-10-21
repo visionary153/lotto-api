@@ -1,0 +1,46 @@
+{
+  "round": 483,
+  "date": "2012-03-03",
+  "numbers": [
+    12,
+    15,
+    19,
+    22,
+    28,
+    34
+  ],
+  "bonus": 5,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2567196675,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 40364728,
+      "winners": 53
+    },
+    {
+      "rank": 3,
+      "prize": 1134322,
+      "winners": 1886
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 83480
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1300537
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 2,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 27791329500
+}

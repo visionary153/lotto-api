@@ -1,0 +1,46 @@
+{
+  "round": 802,
+  "date": "2018-04-14",
+  "numbers": [
+    10,
+    11,
+    12,
+    18,
+    24,
+    42
+  ],
+  "bonus": 27,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1082947993,
+      "winners": 16
+    },
+    {
+      "rank": 2,
+      "prize": 43102408,
+      "winners": 67
+    },
+    {
+      "rank": 3,
+      "prize": 1308501,
+      "winners": 2207
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 107980
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1814300
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 11,
+    "semiAuto": 0
+  },
+  "totalSales": 37573390500
+}

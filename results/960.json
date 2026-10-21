@@ -1,0 +1,46 @@
+{
+  "round": 960,
+  "date": "2021-04-24",
+  "numbers": [
+    2,
+    18,
+    24,
+    30,
+    32,
+    45
+  ],
+  "bonus": 14,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2401133213,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 71462298,
+      "winners": 56
+    },
+    {
+      "rank": 3,
+      "prize": 1557762,
+      "winners": 2569
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 129546
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2180006
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 0,
+    "semiAuto": 1
+  },
+  "totalSales": 49392439500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 1145,
+  "date": "2024-11-09",
+  "numbers": [
+    2,
+    11,
+    31,
+    33,
+    37,
+    44
+  ],
+  "bonus": 32,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3051630084,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 72657860,
+      "winners": 63
+    },
+    {
+      "rank": 3,
+      "prize": 1382079,
+      "winners": 3312
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 164055
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2647054
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 3,
+    "semiAuto": 1
+  },
+  "totalSales": 58057581000
+}

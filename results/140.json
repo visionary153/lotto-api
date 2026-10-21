@@ -1,0 +1,42 @@
+{
+  "round": 140,
+  "date": "2005-08-06",
+  "numbers": [
+    3,
+    13,
+    17,
+    18,
+    19,
+    28
+  ],
+  "bonus": 8,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2109462840,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 51702521,
+      "winners": 34
+    },
+    {
+      "rank": 3,
+      "prize": 1341898,
+      "winners": 1310
+    },
+    {
+      "rank": 4,
+      "prize": 54617,
+      "winners": 64372
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1082575
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 45983464000
+}

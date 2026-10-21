@@ -1,0 +1,46 @@
+{
+  "round": 963,
+  "date": "2021-05-15",
+  "numbers": [
+    6,
+    12,
+    19,
+    23,
+    34,
+    42
+  ],
+  "bonus": 35,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1476478125,
+      "winners": 15
+    },
+    {
+      "rank": 2,
+      "prize": 54282285,
+      "winners": 68
+    },
+    {
+      "rank": 3,
+      "prize": 1176665,
+      "winners": 3137
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 141987
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2219439
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 7,
+    "semiAuto": 0
+  },
+  "totalSales": 47726107500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 705,
+  "date": "2016-06-04",
+  "numbers": [
+    1,
+    6,
+    17,
+    22,
+    28,
+    45
+  ],
+  "bonus": 23,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3987206532,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 54247708,
+      "winners": 49
+    },
+    {
+      "rank": 3,
+      "prize": 1472653,
+      "winners": 1805
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 87931
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1453654
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 3,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 32929921500
+}

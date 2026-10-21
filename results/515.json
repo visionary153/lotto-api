@@ -1,0 +1,46 @@
+{
+  "round": 515,
+  "date": "2012-10-13",
+  "numbers": [
+    2,
+    11,
+    12,
+    15,
+    23,
+    37
+  ],
+  "bonus": 8,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 13200466875,
+      "winners": 1
+    },
+    {
+      "rank": 2,
+      "prize": 62859367,
+      "winners": 35
+    },
+    {
+      "rank": 3,
+      "prize": 1517296,
+      "winners": 1450
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 74773
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1258039
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 0,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 27629467500
+}

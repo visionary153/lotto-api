@@ -1,0 +1,46 @@
+{
+  "round": 729,
+  "date": "2016-11-19",
+  "numbers": [
+    11,
+    17,
+    21,
+    26,
+    36,
+    45
+  ],
+  "bonus": 16,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 4198250719,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 79966681,
+      "winners": 35
+    },
+    {
+      "rank": 3,
+      "prize": 1492712,
+      "winners": 1875
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 89560
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1504682
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 3,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 34392080500
+}

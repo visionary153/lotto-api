@@ -1,0 +1,46 @@
+{
+  "round": 403,
+  "date": "2010-08-21",
+  "numbers": [
+    10,
+    14,
+    22,
+    24,
+    28,
+    37
+  ],
+  "bonus": 26,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2122396875,
+      "winners": 5
+    },
+    {
+      "rank": 2,
+      "prize": 41131723,
+      "winners": 43
+    },
+    {
+      "rank": 3,
+      "prize": 1338883,
+      "winners": 1321
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 63122
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1030051
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 22455667500
+}

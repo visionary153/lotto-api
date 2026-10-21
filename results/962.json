@@ -1,0 +1,46 @@
+{
+  "round": 962,
+  "date": "2021-05-08",
+  "numbers": [
+    1,
+    18,
+    28,
+    31,
+    34,
+    43
+  ],
+  "bonus": 40,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1940906094,
+      "winners": 12
+    },
+    {
+      "rank": 2,
+      "prize": 53175510,
+      "winners": 73
+    },
+    {
+      "rank": 3,
+      "prize": 1503996,
+      "winners": 2581
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 126528
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2119457
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 47978182500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 584,
+  "date": "2014-02-08",
+  "numbers": [
+    7,
+    18,
+    30,
+    39,
+    40,
+    41
+  ],
+  "bonus": 36,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 5033183250,
+      "winners": 3
+    },
+    {
+      "rank": 2,
+      "prize": 78643489,
+      "winners": 32
+    },
+    {
+      "rank": 3,
+      "prize": 1718984,
+      "winners": 1464
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 77972
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1328119
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 2,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 30671928000
+}

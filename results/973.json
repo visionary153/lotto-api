@@ -1,0 +1,46 @@
+{
+  "round": 973,
+  "date": "2021-07-24",
+  "numbers": [
+    22,
+    26,
+    31,
+    37,
+    41,
+    42
+  ],
+  "bonus": 24,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2912742750,
+      "winners": 8
+    },
+    {
+      "rank": 2,
+      "prize": 92468024,
+      "winners": 42
+    },
+    {
+      "rank": 3,
+      "prize": 1720717,
+      "winners": 2257
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 117757
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2003966
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 46976936000
+}

@@ -1,0 +1,46 @@
+{
+  "round": 1033,
+  "date": "2022-09-17",
+  "numbers": [
+    3,
+    11,
+    15,
+    20,
+    35,
+    44
+  ],
+  "bonus": 10,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1913414943,
+      "winners": 13
+    },
+    {
+      "rank": 2,
+      "prize": 52477625,
+      "winners": 79
+    },
+    {
+      "rank": 3,
+      "prize": 1344708,
+      "winners": 3083
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 145505
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2376004
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 9,
+    "manual": 4,
+    "semiAuto": 0
+  },
+  "totalSales": 52321129000
+}

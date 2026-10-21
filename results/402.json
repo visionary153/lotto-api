@@ -1,0 +1,46 @@
+{
+  "round": 402,
+  "date": "2010-08-14",
+  "numbers": [
+    5,
+    9,
+    15,
+    19,
+    22,
+    36
+  ],
+  "bonus": 32,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2662206188,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 43287906,
+      "winners": 41
+    },
+    {
+      "rank": 3,
+      "prize": 1396385,
+      "winners": 1271
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 62656
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1034048
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 3,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 22501473000
+}

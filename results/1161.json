@@ -1,0 +1,46 @@
+{
+  "round": 1161,
+  "date": "2025-03-01",
+  "numbers": [
+    2,
+    12,
+    20,
+    24,
+    34,
+    42
+  ],
+  "bonus": 37,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1792657969,
+      "winners": 16
+    },
+    {
+      "rank": 2,
+      "prize": 40858302,
+      "winners": 117
+    },
+    {
+      "rank": 3,
+      "prize": 1163970,
+      "winners": 4107
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 181457
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2859815
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 10,
+    "manual": 6,
+    "semiAuto": 0
+  },
+  "totalSales": 61615295000
+}

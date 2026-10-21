@@ -1,0 +1,42 @@
+{
+  "round": 163,
+  "date": "2006-01-14",
+  "numbers": [
+    7,
+    11,
+    26,
+    28,
+    29,
+    44
+  ],
+  "bonus": 16,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1629726515,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 40454205,
+      "winners": 47
+    },
+    {
+      "rank": 3,
+      "prize": 1367876,
+      "winners": 1390
+    },
+    {
+      "rank": 4,
+      "prize": 57095,
+      "winners": 66604
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1099200
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 49018952000
+}

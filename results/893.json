@@ -1,0 +1,46 @@
+{
+  "round": 893,
+  "date": "2020-01-11",
+  "numbers": [
+    1,
+    15,
+    17,
+    23,
+    25,
+    41
+  ],
+  "bonus": 10,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2377433625,
+      "winners": 9
+    },
+    {
+      "rank": 2,
+      "prize": 61485353,
+      "winners": 58
+    },
+    {
+      "rank": 3,
+      "prize": 1687720,
+      "winners": 2113
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 116062
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1899696
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 1,
+    "semiAuto": 0
+  },
+  "totalSales": 43830783500
+}

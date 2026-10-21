@@ -1,0 +1,42 @@
+{
+  "round": 78,
+  "date": "2004-05-29",
+  "numbers": [
+    10,
+    13,
+    25,
+    29,
+    33,
+    35
+  ],
+  "bonus": 38,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3519850000,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 106662100,
+      "winners": 22
+    },
+    {
+      "rank": 3,
+      "prize": 2578600,
+      "winners": 910
+    },
+    {
+      "rank": 4,
+      "prize": 110500,
+      "winners": 42450
+    },
+    {
+      "rank": 5,
+      "prize": 10000,
+      "winners": 716323
+    }
+  ],
+  "firstPrizeMethods": null,
+  "totalSales": 61257794000
+}

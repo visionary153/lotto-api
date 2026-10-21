@@ -1,0 +1,46 @@
+{
+  "round": 922,
+  "date": "2020-08-01",
+  "numbers": [
+    2,
+    6,
+    13,
+    17,
+    27,
+    43
+  ],
+  "bonus": 36,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3417904500,
+      "winners": 6
+    },
+    {
+      "rank": 2,
+      "prize": 38403422,
+      "winners": 89
+    },
+    {
+      "rank": 3,
+      "prize": 1188423,
+      "winners": 2876
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 136052
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2097501
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 3,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 44633341000
+}

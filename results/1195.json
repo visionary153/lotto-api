@@ -1,0 +1,46 @@
+{
+  "round": 1195,
+  "date": "2025-10-25",
+  "numbers": [
+    3,
+    15,
+    27,
+    33,
+    34,
+    36
+  ],
+  "bonus": 37,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2939186738,
+      "winners": 10
+    },
+    {
+      "rank": 2,
+      "prize": 56960984,
+      "winners": 86
+    },
+    {
+      "rank": 3,
+      "prize": 1467979,
+      "winners": 3337
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 165621
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 2797760
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 8,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 61459006500
+}

@@ -1,0 +1,46 @@
+{
+  "round": 333,
+  "date": "2009-04-18",
+  "numbers": [
+    5,
+    14,
+    27,
+    30,
+    39,
+    43
+  ],
+  "bonus": 35,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1550987143,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 50263473,
+      "winners": 36
+    },
+    {
+      "rank": 3,
+      "prize": 1325631,
+      "winners": 1365
+    },
+    {
+      "rank": 4,
+      "prize": 60326,
+      "winners": 59991
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 982937
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 2,
+    "semiAuto": 0
+  },
+  "totalSales": 23009535000
+}

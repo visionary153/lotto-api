@@ -1,0 +1,46 @@
+{
+  "round": 819,
+  "date": "2018-08-11",
+  "numbers": [
+    16,
+    25,
+    33,
+    38,
+    40,
+    45
+  ],
+  "bonus": 15,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 2594534840,
+      "winners": 7
+    },
+    {
+      "rank": 2,
+      "prize": 61774640,
+      "winners": 49
+    },
+    {
+      "rank": 3,
+      "prize": 1527995,
+      "winners": 1981
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 97667
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1638089
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 3,
+    "semiAuto": 0
+  },
+  "totalSales": 37289453500
+}

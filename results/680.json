@@ -1,0 +1,46 @@
+{
+  "round": 680,
+  "date": "2015-12-12",
+  "numbers": [
+    4,
+    10,
+    19,
+    29,
+    32,
+    42
+  ],
+  "bonus": 30,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1110570563,
+      "winners": 14
+    },
+    {
+      "rank": 2,
+      "prize": 58893894,
+      "winners": 44
+    },
+    {
+      "rank": 3,
+      "prize": 1385739,
+      "winners": 1870
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 86441
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1413980
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 5,
+    "manual": 9,
+    "semiAuto": 0
+  },
+  "totalSales": 32122600500
+}

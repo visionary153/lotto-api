@@ -1,0 +1,46 @@
+{
+  "round": 716,
+  "date": "2016-08-20",
+  "numbers": [
+    2,
+    6,
+    13,
+    16,
+    29,
+    30
+  ],
+  "bonus": 21,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 1358752157,
+      "winners": 12
+    },
+    {
+      "rank": 2,
+      "prize": 77642981,
+      "winners": 35
+    },
+    {
+      "rank": 3,
+      "prize": 1559096,
+      "winners": 1743
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 88628
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1469730
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 12,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 33520084500
+}

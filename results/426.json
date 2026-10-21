@@ -1,0 +1,46 @@
+{
+  "round": 426,
+  "date": "2011-01-29",
+  "numbers": [
+    4,
+    17,
+    18,
+    27,
+    39,
+    43
+  ],
+  "bonus": 19,
+  "ranks": [
+    {
+      "rank": 1,
+      "prize": 3057233625,
+      "winners": 4
+    },
+    {
+      "rank": 2,
+      "prize": 32351679,
+      "winners": 63
+    },
+    {
+      "rank": 3,
+      "prize": 1393135,
+      "winners": 1463
+    },
+    {
+      "rank": 4,
+      "prize": 50000,
+      "winners": 71102
+    },
+    {
+      "rank": 5,
+      "prize": 5000,
+      "winners": 1174590
+    }
+  ],
+  "firstPrizeMethods": {
+    "auto": 4,
+    "manual": 0,
+    "semiAuto": 0
+  },
+  "totalSales": 25733296000
+}
