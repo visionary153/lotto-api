@@ -1,0 +1,1339 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>로또 API - 로또 6/45 당첨번호·1등 판매점 무료 JSON API</title>
+  <meta name="description"
+    content="로또 6/45 1회부터 최신 회차까지 당첨번호, 보너스 번호, 1~5등 당첨금·당첨자 수, 1등 당첨 판매점을 JSON으로 제공하는 무료 로또 API. 인증 키 없이 바로 호출하고, 매주 토요일 추첨 후 자동 갱신됩니다.">
+  <meta name="keywords"
+    content="로또 API, 로또 당첨번호 API, 로또 JSON, 로또 6/45 API, 로또 1등 판매점 API, 로또 명당 API, 동행복권 API, 로또 회차별 당첨번호, lotto api, korea lotto api">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="visionary153">
+  <link rel="canonical" href="https://visionary153.github.io/lotto-api/">
+  <link rel="sitemap" type="application/xml" href="https://visionary153.github.io/lotto-api/sitemap.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23fbc400'/%3E%3Ctext x='16' y='21.5' font-size='15' font-family='Arial' font-weight='700' text-anchor='middle' fill='%23fff'%3E7%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="lotto-api">
+  <meta property="og:title" content="로또 API - 로또 6/45 당첨번호·1등 판매점 무료 JSON API">
+  <meta property="og:description" content="로또 6/45 전 회차 당첨번호, 등수별 당첨금, 1등 판매점을 JSON으로 제공하는 무료 로또 API. 인증 없이 바로 사용하세요.">
+  <meta property="og:url" content="https://visionary153.github.io/lotto-api/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="로또 API - 로또 6/45 당첨번호·1등 판매점 무료 JSON API">
+  <meta name="twitter:description" content="로또 6/45 전 회차 당첨번호, 등수별 당첨금, 1등 판매점을 JSON으로 제공하는 무료 로또 API.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "로또 6/45 당첨번호 및 1등 당첨 판매점 데이터 (로또 API)",
+    "description": "대한민국 로또 6/45의 1회부터 최신 회차까지 당첨번호, 보너스 번호, 1~5등 1게임당 당첨금과 당첨 게임 수, 1등 번호 선택 방식(자동·수동·반자동), 회차별 판매금액, 1등 당첨 판매점(상호명·주소·좌표)을 JSON으로 제공하는 무료 API입니다. 매주 토요일 추첨 후 자동으로 갱신됩니다.",
+    "url": "https://visionary153.github.io/lotto-api/",
+    "keywords": ["로또 API", "로또 당첨번호", "로또 6/45", "로또 1등 판매점", "로또 명당", "lotto api"],
+    "inLanguage": "ko",
+    "isAccessibleForFree": true,
+    "creator": { "@type": "Person", "name": "visionary153", "url": "https://github.com/visionary153" },
+    "temporalCoverage": "2002-12-07/..",
+    "spatialCoverage": { "@type": "Place", "name": "대한민국" },
+    "distribution": [
+      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "전체 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/all.json" },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "최신 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/latest.json" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "로또 API는 무료인가요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 회원가입이나 API 키 없이 누구나 무료로 GET 요청만으로 사용할 수 있습니다." } },
+      { "@type": "Question", "name": "로또 당첨번호는 언제 갱신되나요?", "acceptedAnswer": { "@type": "Answer", "text": "매주 토요일 추첨 후 20:50, 21:30, 22:30(KST)에 최신 회차를 확인해 반영하고, 일·월요일 09:00에 한 번 더 확인합니다." } },
+      { "@type": "Question", "name": "로또 1등 당첨 판매점(명당) 정보도 제공하나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. 262회부터 회차별 1등 당첨 판매점의 상호명, 주소, 지역, 번호 선택 방식, 위도·경도를 제공합니다." } },
+      { "@type": "Question", "name": "브라우저나 앱에서 바로 호출할 수 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. CORS가 허용되어 있어 웹 브라우저, 모바일 앱, 서버 어디서든 바로 호출할 수 있습니다." } }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --sidebar-bg: #fafafa;
+      --text: #191919;
+      --text-2: #3c3c3c;
+      --muted: #767676;
+      --border: #e5e5e5;
+      --border-strong: #d4d4d4;
+      --accent: #1a56db;
+      --accent-soft: #eef3fe;
+      --point: #fbc400;
+      --code-bg: #f6f7f9;
+      --inline-code-bg: #f2f3f5;
+      --inline-code: #c7254e;
+      --th-bg: #f7f7f7;
+      --info-bg: #f2f7ff;
+      --info-border: #3b82f6;
+      --warn-bg: #fff8e6;
+      --warn-border: #f5a524;
+      --header-h: 60px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-padding-top: calc(var(--header-h) + 20px);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      word-break: keep-all;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    /* ── 상단바 ── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      height: var(--header-h);
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: saturate(180%) blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      height: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--point);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font: 700 15px/1 Arial, sans-serif;
+    }
+
+    .brand-sub {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 16px;
+      padding-left: 10px;
+      border-left: 1px solid var(--border-strong);
+    }
+
+    .topbar-links {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 15px;
+    }
+
+    .topbar-links a {
+      color: var(--text-2);
+    }
+
+    .topbar-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 36px;
+      height: 36px;
+      margin-left: -8px;
+      border: 0;
+      border-radius: 8px;
+      background: none;
+      cursor: pointer;
+      color: var(--text);
+    }
+
+    .menu-btn:hover {
+      background: #f2f2f2;
+    }
+
+    .menu-btn svg {
+      display: block;
+      margin: auto;
+    }
+
+    /* ── 레이아웃 ── */
+    .layout {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 264px minmax(0, 1fr);
+    }
+
+    .sidebar {
+      position: sticky;
+      top: var(--header-h);
+      height: calc(100vh - var(--header-h));
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      background: var(--sidebar-bg);
+      padding: 28px 16px 40px;
+    }
+
+    .nav-group+.nav-group {
+      margin-top: 24px;
+    }
+
+    .nav-title {
+      margin: 0 0 6px;
+      padding: 0 12px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-list a {
+      display: block;
+      padding: 7px 12px;
+      border-radius: 6px;
+      color: var(--text-2);
+      font-size: 15.5px;
+      line-height: 1.45;
+    }
+
+    .nav-list a:hover {
+      background: #f0f0f0;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-list a.active {
+      background: #fff;
+      color: var(--text);
+      font-weight: 700;
+      box-shadow: inset 3px 0 0 var(--point), 0 0 0 1px var(--border);
+    }
+
+    .content {
+      padding: 44px 56px 96px;
+      max-width: 960px;
+      min-width: 0;
+    }
+
+    /* ── 본문 타이포그래피 ── */
+    .breadcrumb {
+      margin: 0 0 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: 35px;
+      line-height: 1.3;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 27px;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    h3 {
+      margin: 32px 0 12px;
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      font-weight: 700;
+    }
+
+    h4 {
+      margin: 22px 0 10px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    h2 code,
+    h3 code {
+      font-size: 0.72em;
+      vertical-align: middle;
+      color: var(--text-2);
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--text-2);
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0 0 14px;
+      color: var(--text-2);
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    li::marker {
+      color: var(--muted);
+    }
+
+    .content>section {
+      padding-top: 56px;
+      margin-top: 56px;
+      border-top: 1px solid var(--border);
+    }
+
+    .content>section:first-child {
+      padding-top: 0;
+      margin-top: 0;
+      border-top: 0;
+    }
+
+    .content>section.latest {
+      border-top: 0;
+      padding-top: 0;
+      margin-top: 32px;
+    }
+
+    .lead {
+      font-size: 17.5px;
+      color: var(--text-2);
+      margin-bottom: 20px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .badges li {
+      margin: 0;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, "D2Coding", Menlo, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--inline-code-bg);
+      color: var(--inline-code);
+      border-radius: 4px;
+      padding: 2px 5px;
+    }
+
+    a code {
+      color: var(--accent);
+    }
+
+    /* ── 코드 블록 ── */
+    .code {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--code-bg);
+      margin: 0 0 18px;
+      overflow: hidden;
+    }
+
+    .code-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 8px 6px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .copy {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-2);
+      border-radius: 5px;
+      padding: 2px 10px;
+      font: inherit;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .copy:hover {
+      border-color: var(--border-strong);
+      color: var(--text);
+    }
+
+    .copy.done {
+      color: #15803d;
+      border-color: #86efac;
+    }
+
+    pre {
+      margin: 0;
+      padding: 16px 18px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    pre code {
+      background: none;
+      color: #24292f;
+      padding: 0;
+      font-size: 14.5px;
+    }
+
+    /* ── 표 ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 0 0 18px;
+      border-top: 2px solid var(--text);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 15.5px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--th-bg);
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    td {
+      color: var(--text-2);
+    }
+
+    td:first-child {
+      white-space: nowrap;
+    }
+
+    td.type {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .req {
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #e11d48;
+    }
+
+    /* ── API 기본 정보 ── */
+    .method {
+      display: inline-block;
+      min-width: 46px;
+      text-align: center;
+      padding: 1px 8px;
+      border-radius: 4px;
+      font: 700 13px/1.8 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      letter-spacing: .02em;
+    }
+
+    .method.get {
+      background: #e7f6ec;
+      color: #16803c;
+    }
+
+    .endpoint {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 12px 16px;
+      margin: 0 0 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .endpoint code {
+      background: none;
+      color: var(--text);
+      padding: 0;
+      font-size: 15px;
+    }
+
+    /* ── 콜아웃 ── */
+    .callout {
+      border-left: 4px solid;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 0 0 18px;
+    }
+
+    .callout> :last-child {
+      margin-bottom: 0;
+    }
+
+    .callout-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .callout.info {
+      background: var(--info-bg);
+      border-color: var(--info-border);
+    }
+
+    .callout.warn {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+    }
+
+    .callout ul {
+      margin: 0;
+    }
+
+    /* ── 최신 당첨번호 카드 (scripts/page.mjs가 갱신) ── */
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 4px 16px rgba(0, 0, 0, .04);
+    }
+
+    .latest h2 {
+      margin-bottom: 2px;
+      font-size: 23px;
+    }
+
+    .latest .date {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0 0 18px;
+    }
+
+    .balls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .balls li {
+      margin: 0;
+    }
+
+    .ball {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+      box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .08);
+    }
+
+    .b1 {
+      background: #fbc400;
+    }
+
+    .b2 {
+      background: #69c8f2;
+    }
+
+    .b3 {
+      background: #ff7272;
+    }
+
+    .b4 {
+      background: #aaaaaa;
+    }
+
+    .b5 {
+      background: #b0d840;
+    }
+
+    .plus {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 20px;
+      margin: 0 2px;
+    }
+
+    .latest dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 8px 20px;
+      margin: 0;
+      padding-top: 16px;
+      border-top: 1px dashed var(--border);
+      font-size: 15.5px;
+    }
+
+    .latest dt {
+      color: var(--muted);
+    }
+
+    .latest dd {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    /* ── FAQ ── */
+    details {
+      border-bottom: 1px solid var(--border);
+    }
+
+    details:first-of-type {
+      border-top: 2px solid var(--text);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 32px 16px 4px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::before {
+      content: "Q.";
+      color: var(--accent);
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    summary::after {
+      content: "";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border: solid var(--muted);
+      border-width: 0 2px 2px 0;
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform .15s;
+    }
+
+    details[open] summary::after {
+      transform: translateY(-30%) rotate(-135deg);
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 4px 18px 30px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 72px;
+      padding-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer p {
+      color: var(--muted);
+    }
+
+    .backdrop {
+      display: none;
+    }
+
+    /* ── 반응형 ── */
+    @media (max-width: 960px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .sidebar {
+        position: fixed;
+        top: var(--header-h);
+        left: 0;
+        bottom: 0;
+        z-index: 25;
+        width: 280px;
+        height: auto;
+        transform: translateX(-100%);
+        transition: transform .2s ease;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, .08);
+      }
+
+      body.nav-open .sidebar {
+        transform: none;
+      }
+
+      body.nav-open .backdrop {
+        display: block;
+        position: fixed;
+        inset: var(--header-h) 0 0 0;
+        z-index: 20;
+        background: rgba(0, 0, 0, .25);
+      }
+
+      .content {
+        padding: 32px 24px 72px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner {
+        padding: 0 16px;
+      }
+
+      .brand-sub,
+      .topbar-links .hide-sm {
+        display: none;
+      }
+
+      .content {
+        padding: 28px 16px 64px;
+      }
+
+      h1 {
+        font-size: 29px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .content>section {
+        padding-top: 40px;
+        margin-top: 40px;
+      }
+
+      .card {
+        padding: 18px;
+      }
+
+      .ball {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+
+      th,
+      td {
+        padding: 9px 10px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .balls {
+        gap: 5px;
+      }
+
+      .ball {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <button class="menu-btn" type="button" aria-label="목차 열기" aria-controls="sidebar" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"
+          stroke-linecap="round">
+          <path d="M3 5h14M3 10h14M3 15h14" />
+        </svg>
+      </button>
+      <a class="brand" href="./"><span class="brand-logo" aria-hidden="true">7</span>lotto-api<span
+          class="brand-sub">API 문서</span></a>
+      <nav class="topbar-links" aria-label="외부 링크">
+        <a class="hide-sm" href="policy.html">이용 정책</a>
+        <a href="https://github.com/visionary153/lotto-api">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <nav aria-label="목차">
+        <div class="nav-group">
+          <p class="nav-title">시작하기</p>
+          <ul class="nav-list">
+            <li><a href="#overview">개요</a></li>
+            <li><a href="#latest">최신 당첨번호</a></li>
+            <li><a href="#quick-start">빠른 시작</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <p class="nav-title">API 레퍼런스</p>
+          <ul class="nav-list">
+            <li><a href="#endpoints">엔드포인트 목록</a></li>
+            <li><a href="#results">추첨결과 조회</a></li>
+            <li><a href="#stores">1등 판매점 조회</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <p class="nav-title">활용하기</p>
+          <ul class="nav-list">
+            <li><a href="#examples">사용 예시</a></li>
+            <li><a href="#schedule">갱신 주기</a></li>
+          </ul>
+        </div>
+        <div class="nav-group">
+          <p class="nav-title">기타</p>
+          <ul class="nav-list">
+            <li><a href="#faq">자주 묻는 질문</a></li>
+            <li><a href="#notice">주의사항</a></li>
+            <li><a href="policy.html">이용 정책</a></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main class="content">
+      <section id="overview" aria-labelledby="overview-title">
+        <p class="breadcrumb">문서 › 로또 API</p>
+        <h1 id="overview-title">로또 API</h1>
+        <p class="lead">로또 6/45 <strong>당첨번호</strong>와 <strong>1등 당첨 판매점</strong>을 JSON으로 제공하는 무료 로또 API입니다. </p>
+        <ul class="badges">
+          <li>무료</li>
+          <li>API 키 없음</li>
+          <li>CORS 허용</li>
+          <li>매주 자동 갱신</li>
+          <li>1회~최신 회차</li>
+        </ul>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              <tr>
+                <th scope="row">Base URL</th>
+                <td><code>https://visionary153.github.io/lotto-api</code></td>
+              </tr>
+              <tr>
+                <th scope="row">인증 방식</th>
+                <td>없음 (API 키 불필요)</td>
+              </tr>
+              <tr>
+                <th scope="row">응답 형식</th>
+                <td><code>application/json</code>, UTF-8</td>
+              </tr>
+              <tr>
+                <th scope="row">메서드</th>
+                <td><span class="method get">GET</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- latest:start -->
+    <section id="latest" class="latest" aria-labelledby="latest-title">
+      <div class="card">
+        <h2 id="latest-title">로또 1246회 당첨번호</h2>
+        <p class="date">2026-10-17 추첨 · 이 데이터는 <a href="results/latest.json"><code>/results/latest.json</code></a>으로 받을 수 있습니다.</p>
+        <ul class="balls" aria-label="16, 22, 23, 24, 27, 28 + 보너스 6">
+          <li class="ball b2">16</li>
+          <li class="ball b3">22</li>
+          <li class="ball b3">23</li>
+          <li class="ball b3">24</li>
+          <li class="ball b3">27</li>
+          <li class="ball b3">28</li>
+          <li class="plus" aria-hidden="true">+</li>
+          <li class="ball b1">6</li>
+        </ul>
+        <dl>
+          <dt>1등 당첨금</dt><dd>1,881,025,430원 (16게임)</dd>
+          <dt>2등 당첨금</dt><dd>78,376,060원 (64게임)</dd>
+          <dt>총 판매금액</dt><dd>60,928,553,620원</dd>
+        </dl>
+      </div>
+    </section>
+    <!-- latest:end -->
+
+      <section id="quick-start" aria-labelledby="quick-start-title">
+        <h2 id="quick-start-title">빠른 시작</h2>
+        <p>로또 당첨번호를 JSON으로 받을 수 있습니다.</p>
+        <div class="code">
+          <div class="code-head"><span>curl</span><button class="copy" type="button">복사</button></div>
+          <pre><code>curl https://visionary153.github.io/lotto-api/results/latest.json</code></pre>
+        </div>
+        <div class="code">
+          <div class="code-head"><span>JavaScript</span><button class="copy" type="button">복사</button></div>
+          <pre><code>const res = await fetch('https://visionary153.github.io/lotto-api/results/latest.json');
+const draw = await res.json();
+console.log(`${draw.round}회 (${draw.date}) 당첨번호: ${draw.numbers.join(', ')} + ${draw.bonus}`);</code></pre>
+        </div>
+        <div class="code">
+          <div class="code-head"><span>Python</span><button class="copy" type="button">복사</button></div>
+          <pre><code>import requests
+
+draw = requests.get('https://visionary153.github.io/lotto-api/results/latest.json').json()
+print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
+        </div>
+      </section>
+
+      <section id="endpoints" aria-labelledby="endpoints-title">
+        <h2 id="endpoints-title">엔드포인트 목록</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>메서드</th>
+                <th>경로</th>
+                <th>내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="method get">GET</span></td>
+                <td><a href="results/latest.json"><code>/results/latest.json</code></a></td>
+                <td>최신 회차 로또 추첨결과 1건</td>
+              </tr>
+              <tr>
+                <td><span class="method get">GET</span></td>
+                <td><code>/results/{회차}.json</code></td>
+                <td>해당 회차 로또 추첨결과 (예: <a href="results/1190.json"><code>/results/1190.json</code></a>)</td>
+              </tr>
+              <tr>
+                <td><span class="method get">GET</span></td>
+                <td><a href="results/all.json"><code>/results/all.json</code></a></td>
+                <td>1회부터 최신 회차까지 전체 로또 당첨번호 배열 (회차 오름차순)</td>
+              </tr>
+              <tr>
+                <td><span class="method get">GET</span></td>
+                <td><code>/stores/{회차}.json</code></td>
+                <td>해당 회차 로또 1등 당첨 판매점 (<strong>262회부터</strong> 제공, 예: <a
+                    href="stores/1190.json"><code>/stores/1190.json</code></a>)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          <span class="callout-title">에러 응답</span>
+          <p>없는 회차를 요청하면 <code>404</code>가 응답됩니다.</p>
+        </div>
+      </section>
+
+      <section id="results" aria-labelledby="results-title">
+        <h2 id="results-title">추첨결과 조회</h2>
+        <p>회차별 로또 당첨번호, 1등부터 5등까지의 게임당 당첨금과 당첨 수를 제공합니다.</p>
+
+        <h3>기본 정보</h3>
+        <div class="endpoint"><span class="method get">GET</span><code>/results/{회차}.json</code></div>
+        <p><code>/results/latest.json</code>은 최신 회차 1건을, <code>/results/all.json</code>은 아래 객체의 배열을 돌려줍니다.</p>
+
+        <h3>요청</h3>
+        <h4>경로 파라미터</h4>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>타입</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>회차</code><span class="req">필수</span></td>
+                <td class="type">number</td>
+                <td>조회할 회차 (1 ~ 최신 회차)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>응답</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>필드</th>
+                <th>타입</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>round</code></td>
+                <td class="type">number</td>
+                <td>회차</td>
+              </tr>
+              <tr>
+                <td><code>date</code></td>
+                <td class="type">string</td>
+                <td>추첨일 (<code>YYYY-MM-DD</code>)</td>
+              </tr>
+              <tr>
+                <td><code>numbers</code></td>
+                <td class="type">number[6]</td>
+                <td>당첨번호 6개 (오름차순)</td>
+              </tr>
+              <tr>
+                <td><code>bonus</code></td>
+                <td class="type">number</td>
+                <td>보너스 번호</td>
+              </tr>
+              <tr>
+                <td><code>ranks</code></td>
+                <td class="type">object[5]</td>
+                <td>1~5등 당첨 정보</td>
+              </tr>
+              <tr>
+                <td><code>ranks[].rank</code></td>
+                <td class="type">number</td>
+                <td>등수</td>
+              </tr>
+              <tr>
+                <td><code>ranks[].prize</code></td>
+                <td class="type">number</td>
+                <td><strong>1게임당</strong> 당첨금 (원)</td>
+              </tr>
+              <tr>
+                <td><code>ranks[].winners</code></td>
+                <td class="type">number</td>
+                <td>당첨 게임 수</td>
+              </tr>
+              <tr>
+                <td><code>firstPrizeMethods</code></td>
+                <td class="type">object | null</td>
+                <td>1등 당첨 게임의 번호 선택 방식별 개수 (<code>auto</code> 자동 / <code>manual</code> 수동 / <code>semiAuto</code> 반자동).
+                  원본에 기록이 없는 <strong>1~261회는 <code>null</code></strong></td>
+              </tr>
+              <tr>
+                <td><code>totalSales</code></td>
+                <td class="type">number</td>
+                <td>해당 회차 총 판매금액 (원)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>예제</h3>
+        <div class="code">
+          <div class="code-head"><span>요청</span><button class="copy" type="button">복사</button></div>
+          <pre><code>curl https://visionary153.github.io/lotto-api/results/1190.json</code></pre>
+        </div>
+        <div class="code">
+          <div class="code-head"><span>응답</span><button class="copy" type="button">복사</button></div>
+          <pre><code>{
+  "round": 1190,
+  "date": "2025-09-20",
+  "numbers": [7, 9, 19, 23, 26, 45],
+  "bonus": 33,
+  "ranks": [
+    { "rank": 1, "prize": 4622793813, "winners": 6 },
+    { "rank": 2, "prize": 40909680, "winners": 113 },
+    { "rank": 3, "prize": 1403825, "winners": 3293 },
+    { "rank": 4, "prize": 50000, "winners": 168764 },
+    { "rank": 5, "prize": 5000, "winners": 2752776 }
+  ],
+  "firstPrizeMethods": { "auto": 3, "manual": 3, "semiAuto": 0 },
+  "totalSales": 59184430500
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="stores" aria-labelledby="stores-title">
+        <h2 id="stores-title">1등 판매점 조회</h2>
+        <p>회차별 로또 1등 당첨 판매점(로또 명당)의 상호명, 주소, 지역, 번호 선택 방식, 위도·경도를 제공합니다. </p>
+
+        <h3>기본 정보</h3>
+        <div class="endpoint"><span class="method get">GET</span><code>/stores/{회차}.json</code></div>
+
+        <h3>요청</h3>
+        <h4>경로 파라미터</h4>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>이름</th>
+                <th>타입</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>회차</code><span class="req">필수</span></td>
+                <td class="type">number</td>
+                <td>조회할 회차 (<strong>262회부터</strong> 제공)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>응답</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>필드</th>
+                <th>타입</th>
+                <th>설명</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>round</code></td>
+                <td class="type">number</td>
+                <td>회차</td>
+              </tr>
+              <tr>
+                <td><code>stores</code></td>
+                <td class="type">object[]</td>
+                <td>1등 당첨 판매점 목록</td>
+              </tr>
+              <tr>
+                <td><code>stores[].id</code></td>
+                <td class="type">string</td>
+                <td>판매점 ID</td>
+              </tr>
+              <tr>
+                <td><code>stores[].name</code></td>
+                <td class="type">string</td>
+                <td>상호명</td>
+              </tr>
+              <tr>
+                <td><code>stores[].address</code></td>
+                <td class="type">string</td>
+                <td>주소</td>
+              </tr>
+              <tr>
+                <td><code>stores[].region</code></td>
+                <td class="type">string</td>
+                <td>지역 (예: <code>서울</code>, <code>부산</code>)</td>
+              </tr>
+              <tr>
+                <td><code>stores[].method</code></td>
+                <td class="type">string</td>
+                <td>1등 번호 선택 방식: <code>자동</code> / <code>수동</code> / <code>반자동</code></td>
+              </tr>
+              <tr>
+                <td><code>stores[].lat</code></td>
+                <td class="type">number | <code>""</code></td>
+                <td>위도</td>
+              </tr>
+              <tr>
+                <td><code>stores[].lng</code></td>
+                <td class="type">number | <code>""</code></td>
+                <td>경도</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout info">
+          <span class="callout-title">참고</span>
+          <ul>
+            <li>한 판매점에서 1등이 여러 게임 나오면 같은 판매점이 여러 번 들어갑니다.</li>
+            <li>현재 <strong>정상 영업 중인 판매점만</strong> 포함합니다.</li>
+          </ul>
+        </div>
+
+        <h3>예제</h3>
+        <div class="code">
+          <div class="code-head"><span>요청</span><button class="copy" type="button">복사</button></div>
+          <pre><code>curl https://visionary153.github.io/lotto-api/stores/1190.json</code></pre>
+        </div>
+        <div class="code">
+          <div class="code-head"><span>응답</span><button class="copy" type="button">복사</button></div>
+          <pre><code>{
+  "round": 1190,
+  "stores": [
+    {
+      "id": "12600086",
+      "name": "돈벼락맞는곳",
+      "address": "부산 동구 조방로49번길 18-1",
+      "region": "부산",
+      "method": "자동",
+      "lat": 35.139161,
+      "lng": 129.05993
+    }
+  ]
+}</code></pre>
+        </div>
+      </section>
+
+      <section id="schedule" aria-labelledby="schedule-title">
+        <h2 id="schedule-title">갱신 주기</h2>
+        <ul>
+          <li>매주 <strong>토요일 20:50 / 21:30 / 22:30 (KST)</strong>에 최신 회차 로또 당첨번호를 확인하고, <strong>일·월요일 09:00</strong>에 한
+            번 더 확인합니다.</li>
+          <li>추첨 직후 공식 집계가 끝나지 않은 데이터는 반영하지 않고 다음 확인 때 반영합니다.</li>
+          <li>1등 판매점은 집계가 늦어 일요일에 반영될 수 있습니다.</li>
+          <li>캐시 때문에 갱신 후 최대 10분 정도 이전 데이터가 보일 수 있습니다.</li>
+        </ul>
+      </section>
+
+      <section id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">자주 묻는 질문</h2>
+        <details>
+          <summary>로또 API는 무료인가요?</summary>
+          <p>네. 회원가입이나 API 키 없이 누구나 무료로 GET 요청만으로 사용할 수 있습니다.</p>
+        </details>
+        <details>
+          <summary>로또 당첨번호는 언제 갱신되나요?</summary>
+          <p>매주 토요일 추첨 후 20:50, 21:30, 22:30(KST)에 최신 회차를 확인해 반영하고, 일·월요일 09:00에 한 번 더 확인합니다.</p>
+        </details>
+        <details>
+          <summary>로또 1등 당첨 판매점(명당) 정보도 제공하나요?</summary>
+          <p>네. 262회부터 회차별 1등 당첨 판매점의 상호명, 주소, 지역, 번호 선택 방식, 위도·경도를 제공합니다.</p>
+        </details>
+        <details>
+          <summary>브라우저나 앱에서 바로 호출할 수 있나요?</summary>
+          <p>네. CORS가 허용되어 있어 웹 브라우저, 모바일 앱, 서버 어디서든 바로 호출할 수 있습니다.</p>
+        </details>
+      </section>
+
+      <section id="notice" aria-labelledby="notice-title">
+        <h2 id="notice-title">주의사항</h2>
+        <div class="callout warn">
+          <ul>
+            <li>이 데이터는 동행복권 공개 정보를 수집해 가공한 것입니다. 동행복권과 무관한 <strong>비공식</strong> 서비스이며, 오류나 지연이 있을 수 있습니다.</li>
+            <li>당첨 확인이나 지급 같은 중요한 판단은 반드시 <a href="https://www.dhlottery.co.kr" rel="noopener">동행복권</a> 공식 결과로 확인하세요.
+            </li>
+            <li>데이터의 정확성이나 계속 제공되는 것을 보장하지 않습니다. 이 데이터를 사용해서 생긴 결과에 대해 책임지지 않습니다.</li>
+            <li>데이터 출처, 수집 방식, 권리자 삭제 요청 방법은 <a href="policy.html">이용 정책</a>을 확인하세요.</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer>
+        <p>lotto-api · 로또 6/45 당첨번호·1등 판매점 무료 JSON API · 데이터 출처: 동행복권 · <a href="policy.html">이용 정책</a> · <a
+            href="https://github.com/visionary153/lotto-api">GitHub</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (() => {
+      // 모바일 사이드바 토글
+      const body = document.body;
+      const btn = document.querySelector('.menu-btn');
+      const setOpen = (open) => { body.classList.toggle('nav-open', open); btn.setAttribute('aria-expanded', String(open)); };
+      btn.addEventListener('click', () => setOpen(!body.classList.contains('nav-open')));
+      document.querySelector('.backdrop').addEventListener('click', () => setOpen(false));
+      document.querySelectorAll('.sidebar a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+
+      // 코드 복사
+      document.querySelectorAll('.copy').forEach((b) => b.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(b.closest('.code').querySelector('code').innerText);
+          b.textContent = '복사됨'; b.classList.add('done');
+          setTimeout(() => { b.textContent = '복사'; b.classList.remove('done'); }, 1500);
+        } catch { b.textContent = '실패'; }
+      }));
+
+      // 현재 보고 있는 섹션을 사이드바에 표시
+      const links = new Map([...document.querySelectorAll('.sidebar a[href^="#"]')].map((a) => [a.hash.slice(1), a]));
+      const sections = [...links.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+      const mark = () => {
+        const y = window.scrollY + 120;
+        let cur = sections[0];
+        for (const s of sections) if (s.offsetTop <= y) cur = s;
+        if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 2) cur = sections[sections.length - 1];
+        links.forEach((a, id) => a.classList.toggle('active', id === cur.id));
+      };
+      addEventListener('scroll', mark, { passive: true });
+      mark();
+    })();
+  </script>
+</body>
+
+</html>

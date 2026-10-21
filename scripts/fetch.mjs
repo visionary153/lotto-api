@@ -2,7 +2,7 @@
 //
 //   node scripts/fetch.mjs              # 저장된 마지막 회차 이후 ~ 최신 회차 (증분)
 //   node scripts/fetch.mjs --from 1     # 지정 회차부터 다시 수집 (전체 백필)
-//   node scripts/fetch.mjs --from 262 --stores-only   # 판매점만 다시 수집
+//   node scripts/fetch.mjs --from 444 --to 593 --stores-only   # 지정 범위의 판매점만 다시 수집
 //
 // 출력
 //   results/{회차}.json   추첨결과
@@ -162,6 +162,8 @@ async function main() {
   const fromArg = process.argv.indexOf('--from');
   const from = fromArg > 0 ? Number(process.argv[fromArg + 1]) : null;
   const storesOnly = process.argv.includes('--stores-only');
+  const toArg = process.argv.indexOf('--to');
+  const to = toArg > 0 ? Number(process.argv[toArg + 1]) : null;
 
   const latestRaw = await fetchRawDraw();
   const latestRound = latestRaw.ltEpsd;
@@ -172,7 +174,8 @@ async function main() {
   const start = from ?? 1;
   const drawTargets = [];
   const storeTargets = [];
-  for (let r = start; r <= latestRound; r++) {
+  const end = Math.min(to ?? latestRound, latestRound);
+  for (let r = start; r <= end; r++) {
     if (!storesOnly && (from != null || !haveDraws.has(r) || r === latestRound)) drawTargets.push(r);
     if (r >= FIRST_STORE_ROUND && (from != null || !haveStores.has(r) || r === latestRound)) {
       storeTargets.push(r);
