@@ -91,4 +91,5 @@ Base URL: `https://choi-chulwoong.github.io/lotto-api`
 
 - 이 데이터는 동행복권 공개 정보를 수집해 가공한 것입니다. 동행복권과 무관한 **비공식** 서비스이며, 오류나 지연이 있을 수 있습니다.
 - 데이터의 정확성이나 계속 제공되는 것을 보장하지 않습니다. 이 데이터를 사용해서 생긴 결과에 대해 책임지지 않습니다.
+- 데이터 출처, 수집 방식, 권리자 삭제·중단 요청 방법은 [이용 정책](https://choi-chulwoong.github.io/lotto-api/policy.html)을 확인하세요. 요청은 [Issues](https://github.com/choi-chulwoong/lotto-api/issues)로 받습니다.
 

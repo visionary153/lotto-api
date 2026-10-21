@@ -2,16 +2,20 @@
 //
 //   node scripts/fetch.mjs              # 저장된 마지막 회차 이후 ~ 최신 회차 (증분)
 //   node scripts/fetch.mjs --from 1     # 지정 회차부터 다시 수집 (전체 백필)
+//   node scripts/fetch.mjs --from 262 --stores-only   # 판매점만 다시 수집
 //
 // 출력
 //   results/{회차}.json   추첨결과
 //   results/all.json      전체 추첨결과 (회차 ASC)
 //   results/latest.json   최신 회차
 //   stores/{회차}.json    1등 판매점 (262회부터 제공)
+//   index.html, sitemap.xml  최신 회차 반영 (scripts/page.mjs)
 
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import { updatePage } from './page.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const RESULTS_DIR = join(ROOT, 'results');
@@ -23,9 +27,9 @@ const STORE_URL = `${BASE}/wnprchsplcsrch/selectLtWnShp.do`;
 const STORE_PAGE_SIZE = 50;
 // 동행복권은 262회부터 1등 판매점 정보를 제공한다.
 const FIRST_STORE_ROUND = 262;
-const CONCURRENCY = 2;
+const CONCURRENCY = 1;
 // 요청 간 간격 (짧은 시간에 많이 요청하면 동행복권이 IP를 일시 차단한다)
-const REQUEST_DELAY_MS = 300;
+const REQUEST_DELAY_MS = 1000;
 
 async function getJson(url, params, attempt = 1) {
   const qs = new URLSearchParams(params).toString();
@@ -157,6 +161,7 @@ async function main() {
 
   const fromArg = process.argv.indexOf('--from');
   const from = fromArg > 0 ? Number(process.argv[fromArg + 1]) : null;
+  const storesOnly = process.argv.includes('--stores-only');
 
   const latestRaw = await fetchRawDraw();
   const latestRound = latestRaw.ltEpsd;
@@ -168,7 +173,7 @@ async function main() {
   const drawTargets = [];
   const storeTargets = [];
   for (let r = start; r <= latestRound; r++) {
-    if (from != null || !haveDraws.has(r) || r === latestRound) drawTargets.push(r);
+    if (!storesOnly && (from != null || !haveDraws.has(r) || r === latestRound)) drawTargets.push(r);
     if (r >= FIRST_STORE_ROUND && (from != null || !haveStores.has(r) || r === latestRound)) {
       storeTargets.push(r);
     }
@@ -215,6 +220,7 @@ async function main() {
   }
   if (await writeJson(join(RESULTS_DIR, 'all.json'), all, false)) changed.push('results/all.json');
   if (await writeJson(join(RESULTS_DIR, 'latest.json'), all.at(-1))) changed.push('results/latest.json');
+  changed.push(...(await updatePage(all.at(-1))));
 
   console.log(`판매점 정상 아닌 행 ${excluded}건 제외`);
   console.log(`변경 ${changed.length}건${changed.length <= 10 ? `: ${changed.join(', ')}` : ''}`);

@@ -8,6 +8,10 @@ on:
     - cron: '30 13 * * 6' # 토 22:30 KST
     - cron: '0 0 * * 0' # 일 09:00 KST — 1등 판매점 반영 확인
     - cron: '0 0 * * 1' # 월 09:00 KST — 예비
+  # 소개 페이지를 직접 수정해 push하면 수집 없이 배포만 한다
+  push:
+    branches: [main]
+    paths: ['index.html', 'policy.html', 'sitemap.xml']
   workflow_dispatch:
     inputs:
       from:
@@ -36,26 +40,27 @@ jobs:
           node-version: 22
 
       - name: Fetch results
+        if: github.event_name != 'push'
         run: node scripts/fetch.mjs ${{ inputs.from && format('--from {0}', inputs.from) || '' }}
 
       - name: Commit
         id: commit
         run: |
-          if [ -z "$(git status --porcelain results stores)" ]; then
+          if [ -z "$(git status --porcelain results stores index.html sitemap.xml)" ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           latest=$(node -p "require('./results/latest.json').round")
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add results stores
+          git add results stores index.html sitemap.xml
           git commit -m "update ${latest}회 ($(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M'))"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
   deploy:
     needs: update
-    if: needs.update.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+    if: needs.update.outputs.changed == 'true' || github.event_name != 'schedule'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
