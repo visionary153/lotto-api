@@ -4,11 +4,6 @@
 
 📖 **API 문서: https://visionary153.github.io/lotto-api/**
 
-- 무료 · API 키 없음 · CORS 허용
-- 1회부터 최신 회차까지 전체 데이터
-- 매주 토요일 추첨 후 자동 갱신
-
-> [!WARNING]
 > 비공식 데이터입니다. 당첨 확인이나 지급 같은 중요한 판단은 반드시 [동행복권](https://www.dhlottery.co.kr) 공식 결과로 확인하세요.
 
 ## 기본 정보
@@ -16,7 +11,6 @@
 | 항목 | 값 |
 |---|---|
 | Base URL | `https://visionary153.github.io/lotto-api` |
-| 인증 방식 | 없음 (API 키 불필요) |
 | 응답 형식 | `application/json`, UTF-8 |
 | 메서드 | `GET` |
 
