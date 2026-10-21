@@ -11,7 +11,7 @@ on:
   # 소개 페이지를 직접 수정해 push하면 수집 없이 배포만 한다
   push:
     branches: [main]
-    paths: ['index.html', 'policy.html', 'sitemap.xml']
+    paths: ['index.html', 'policy.html', 'sitemap.xml', 'google*.html', '.github/workflows/update.yml']
   workflow_dispatch:
     inputs:
       from:
