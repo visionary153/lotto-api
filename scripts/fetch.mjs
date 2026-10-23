@@ -200,10 +200,15 @@ async function main() {
   });
 
   await pool(storeTargets, async (round) => {
-    const { raw, stores } = await fetchStores(round);
     const draw = draws.get(round) ?? (await readJson(join(RESULTS_DIR, `${round}.json`)));
+    // 추첨결과가 집계 전이면 판매점도 집계 전 → 요청하지 않는다 (토요일 잦은 확인 시 요청 절약)
+    if (!draw) {
+      skipped.push(`${round}회 판매점: 집계 전`);
+      return;
+    }
+    const { raw, stores } = await fetchStores(round);
     // 1등 당첨자가 있는데 판매점 응답이 비어 있으면 아직 집계 전 (정상 필터 전 원본 기준)
-    if (!draw || (draw.ranks[0].winners > 0 && raw === 0)) {
+    if (draw.ranks[0].winners > 0 && raw === 0) {
       skipped.push(`${round}회 판매점: 집계 전`);
       return;
     }
