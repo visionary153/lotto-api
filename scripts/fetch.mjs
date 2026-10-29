@@ -9,6 +9,7 @@
 //   results/all.json      전체 추첨결과 (회차 ASC)
 //   results/latest.json   최신 회차
 //   stores/{회차}.json    1등 판매점 (262회부터 제공)
+//   stores/all.json       전체 1등 판매점 (회차 ASC, 저장된 회차별 파일을 합친 것)
 //   index.html, sitemap.xml  최신 회차 반영 (scripts/page.mjs)
 
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
@@ -217,6 +218,13 @@ async function main() {
       changed.push(`stores/${round}.json`);
     }
   });
+
+  // stores/all.json 재생성 — 판매점 전체를 요청 한 번에 받을 수 있게 (회차별 파일을 합칠 뿐, 추가 요청 없음)
+  const allStores = [];
+  for (const round of (await savedRounds(STORES_DIR)).sort((a, b) => a - b)) {
+    allStores.push(await readJson(join(STORES_DIR, `${round}.json`)));
+  }
+  if (await writeJson(join(STORES_DIR, 'all.json'), allStores, false)) changed.push('stores/all.json');
 
   // all.json / latest.json 재생성
   const all = [];

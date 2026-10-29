@@ -48,7 +48,8 @@
     "spatialCoverage": { "@type": "Place", "name": "대한민국" },
     "distribution": [
       { "@type": "DataDownload", "encodingFormat": "application/json", "name": "전체 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/all.json" },
-      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "최신 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/latest.json" }
+      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "최신 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/latest.json" },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "전체 회차 1등 당첨 판매점", "contentUrl": "https://visionary153.github.io/lotto-api/stores/all.json" }
     ]
   }
   </script>
@@ -1116,6 +1117,8 @@ print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
 
         <h3>기본 정보</h3>
         <div class="endpoint"><span class="method get">GET</span><code>/stores/{회차}.json</code></div>
+        <div class="endpoint"><span class="method get">GET</span><a href="stores/all.json"><code>/stores/all.json</code></a></div>
+        <p>전체 회차를 한 번에 받으려면 <code>/stores/all.json</code>을 쓰세요. 262회부터 회차 오름차순 배열이고, 원소는 <code>/stores/{회차}.json</code>과 같은 형태입니다.</p>
 
         <h3>요청</h3>
         <h4>경로 파라미터</h4>
