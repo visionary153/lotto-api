@@ -78,7 +78,6 @@ curl https://visionary153.github.io/lotto-api/results/latest.json
 | 메서드 | 경로 | 내용 |
 |---|---|---|
 | `GET` | `/stores/{회차}.json` | 해당 회차 1등 당첨 판매점 (예: [`/stores/1190.json`](https://visionary153.github.io/lotto-api/stores/1190.json)) |
-| `GET` | [`/stores/all.json`](https://visionary153.github.io/lotto-api/stores/all.json) | 전체 회차 1등 당첨 판매점 (262회부터, 회차 오름차순 배열 — 원소는 `/stores/{회차}.json`과 같은 형태) |
 
 ### 요청
 
