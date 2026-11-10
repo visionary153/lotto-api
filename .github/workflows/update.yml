@@ -67,10 +67,6 @@ jobs:
           echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
           echo "round=${latest}" >> "$GITHUB_OUTPUT"
 
-  # 결과가 바뀌면 로또부자 웹(lotto-rich)을 곧바로 다시 배포시킨다 — 추첨 직후 회차 페이지를 채우려고.
-  # 웹은 이 커밋의 raw 파일을 받으므로 Pages 배포(10분 캐시)를 기다리지 않는다.
-  # 토큰: lotto-rich 저장소 Contents 읽기·쓰기 권한의 fine-grained PAT (시크릿 LOTTO_RICH_DISPATCH_TOKEN)
-  # 수동 실행(workflow_dispatch)은 데이터가 그대로여도 보낸다 — 토큰·웹 배포 연결 확인용
   notify-web:
     needs: update
     if: needs.update.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
