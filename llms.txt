@@ -1,0 +1,56 @@
+# lotto-api (로또 API)
+
+> 대한민국 로또 6/45의 당첨번호와 1등 당첨 판매점을 JSON으로 제공하는 무료 공개 API. API 키 없음, CORS 허용, GET 전용 정적 JSON. 1회부터 최신 회차까지 제공하며 매주 토요일 추첨 후 자동 갱신된다.
+
+비공식 데이터다. 동행복권 공개 정보를 수집·가공한 것으로 동행복권과 무관하며 오류나 지연이 있을 수 있다. 당첨 확인·지급 같은 중요한 판단은 반드시 동행복권(https://www.dhlottery.co.kr) 공식 결과로 확인해야 한다.
+
+## 기본 정보
+
+- Base URL: https://visionary153.github.io/lotto-api
+- 인증: 없음 (API 키 불필요)
+- 응답: application/json, UTF-8
+- CORS: Access-Control-Allow-Origin: * (브라우저·앱·서버에서 바로 호출 가능)
+- 갱신: 토요일 20:35(KST) 추첨 후 20:40~22:45 사이 반영, 일·월 09:00 재확인 (1등 판매점 반영)
+
+## 엔드포인트
+
+- GET /results/latest.json — 최신 회차 추첨결과 1건
+- GET /results/{회차}.json — 특정 회차 추첨결과 (1 ~ 최신 회차, 예: /results/1190.json)
+- GET /results/all.json — 전체 회차 추첨결과 (회차 오름차순 배열)
+- GET /stores/{회차}.json — 특정 회차 1등 당첨 판매점 (262회부터, 현재 영업 중인 판매점만)
+
+## 추첨결과 필드
+
+- round (number): 회차
+- date (string): 추첨일 YYYY-MM-DD
+- numbers (number[6]): 당첨번호 6개, 오름차순
+- bonus (number): 보너스 번호
+- ranks (object[5]): 1~5등 { rank 등수, prize 1게임당 당첨금(원), winners 당첨 게임 수 }
+- firstPrizeMethods (object | null): 1등 번호 선택 방식별 개수 { auto 자동, manual 수동, semiAuto 반자동 }. 1~261회는 null
+- totalSales (number): 총 판매금액(원)
+
+## 1등 판매점 필드
+
+- round (number): 회차
+- stores (object[]): { id, name 상호명, address 주소, region 지역, method "자동"|"수동"|"반자동", lat 위도, lng 경도 }. 좌표가 없으면 lat·lng는 빈 문자열 ""
+
+## 예시
+
+```sh
+curl https://visionary153.github.io/lotto-api/results/1190.json
+```
+
+```json
+{"round":1190,"date":"2025-09-20","numbers":[7,9,19,23,26,45],"bonus":33,"ranks":[{"rank":1,"prize":4622793813,"winners":6},{"rank":2,"prize":40909680,"winners":113},{"rank":3,"prize":1403825,"winners":3293},{"rank":4,"prize":50000,"winners":168764},{"rank":5,"prize":5000,"winners":2752776}],"firstPrizeMethods":{"auto":3,"manual":3,"semiAuto":0},"totalSales":59184430500}
+```
+
+## 문서
+
+- [API 문서 (사람용)](https://visionary153.github.io/lotto-api/): 사용 예시(curl·JavaScript·Python), 갱신 주기, FAQ
+- [OpenAPI 3.1 명세](https://visionary153.github.io/lotto-api/openapi.json): 전체 경로·스키마
+- [이용 정책](https://visionary153.github.io/lotto-api/policy.html): 데이터 출처, 수집 방식, 권리자 삭제·중단 요청
+- [GitHub 저장소](https://github.com/visionary153/lotto-api): 소스와 문의(Issues)
+
+## 활용 사례
+
+- [로또부자](https://lotto.visionary153.com/): 이 API로 만든 로또 번호 생성기·회차별 당첨번호 분석 사이트

@@ -13,6 +13,8 @@
   <meta name="author" content="visionary153">
   <link rel="canonical" href="https://visionary153.github.io/lotto-api/">
   <link rel="sitemap" type="application/xml" href="https://visionary153.github.io/lotto-api/sitemap.xml">
+  <link rel="service-desc" type="application/json" href="https://visionary153.github.io/lotto-api/openapi.json">
+  <link rel="alternate" type="text/plain" title="llms.txt" href="https://visionary153.github.io/lotto-api/llms.txt">
   <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
   <link rel="icon"
@@ -48,7 +50,7 @@
     "spatialCoverage": { "@type": "Place", "name": "대한민국" },
     "distribution": [
       { "@type": "DataDownload", "encodingFormat": "application/json", "name": "전체 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/all.json" },
-      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "최신 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/latest.json" },
+      { "@type": "DataDownload", "encodingFormat": "application/json", "name": "최신 회차 당첨번호", "contentUrl": "https://visionary153.github.io/lotto-api/results/latest.json" }
     ]
   }
   </script>
@@ -962,6 +964,7 @@ console.log(`${draw.round}회 (${draw.date}) 당첨번호: ${draw.numbers.join('
 draw = requests.get('https://visionary153.github.io/lotto-api/results/latest.json').json()
 print(draw['round'], draw['numbers'], draw['bonus'])</code></pre>
         </div>
+        <p>코드 생성기·AI 도구에는 <a href="openapi.json">OpenAPI 3.1 명세(openapi.json)</a>나 <a href="llms.txt">llms.txt</a>를 넘겨 주세요. 전체 경로와 응답 스키마가 들어 있습니다.</p>
       </section>
 
       <section id="results" aria-labelledby="results-title">

@@ -4,6 +4,8 @@
 
 📖 **API 문서: https://visionary153.github.io/lotto-api/**
 
+🤖 **AI·코드 생성기용: [OpenAPI 3.1 명세](https://visionary153.github.io/lotto-api/openapi.json) · [llms.txt](https://visionary153.github.io/lotto-api/llms.txt)**
+
 > 비공식 데이터입니다. 당첨 확인이나 지급 같은 중요한 판단은 반드시 [동행복권](https://www.dhlottery.co.kr) 공식 결과로 확인하세요.
 
 ## 기본 정보

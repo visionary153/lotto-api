@@ -1,0 +1,262 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "lotto-api (로또 API)",
+    "version": "1.0.0",
+    "summary": "로또 6/45 당첨번호·1등 판매점 무료 JSON API",
+    "description": "대한민국 로또 6/45의 1회부터 최신 회차까지 당첨번호, 보너스 번호, 1~5등 1게임당 당첨금과 당첨 게임 수, 1등 번호 선택 방식, 회차별 판매금액, 1등 당첨 판매점을 JSON으로 제공합니다.\n\n- 무료, API 키 없음, CORS 허용 (`Access-Control-Allow-Origin: *`)\n- 정적 JSON 파일이므로 GET만 지원합니다.\n- 매주 토요일 추첨 후 자동 갱신 (20:40~22:45 KST 사이 반영, 일·월 09:00 재확인)\n- 비공식 데이터입니다. 당첨 확인·지급 같은 중요한 판단은 반드시 동행복권(https://www.dhlottery.co.kr) 공식 결과로 확인하세요.",
+    "contact": {
+      "name": "visionary153",
+      "url": "https://github.com/visionary153/lotto-api/issues"
+    },
+    "termsOfService": "https://visionary153.github.io/lotto-api/policy.html"
+  },
+  "externalDocs": {
+    "description": "API 문서",
+    "url": "https://visionary153.github.io/lotto-api/"
+  },
+  "servers": [
+    {
+      "url": "https://visionary153.github.io/lotto-api"
+    }
+  ],
+  "security": [],
+  "tags": [
+    {
+      "name": "results",
+      "description": "추첨결과 (당첨번호·등수별 당첨금)"
+    },
+    {
+      "name": "stores",
+      "description": "1등 당첨 판매점"
+    }
+  ],
+  "paths": {
+    "/results/latest.json": {
+      "get": {
+        "operationId": "getLatestResult",
+        "tags": ["results"],
+        "summary": "최신 회차 추첨결과",
+        "responses": {
+          "200": {
+            "description": "최신 회차 1건",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Result" },
+                "examples": {
+                  "round1190": { "$ref": "#/components/examples/Result1190" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/results/{round}.json": {
+      "get": {
+        "operationId": "getResultByRound",
+        "tags": ["results"],
+        "summary": "특정 회차 추첨결과",
+        "parameters": [
+          {
+            "name": "round",
+            "in": "path",
+            "required": true,
+            "description": "회차 (1 ~ 최신 회차)",
+            "schema": { "type": "integer", "minimum": 1 },
+            "example": 1190
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "해당 회차 1건",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Result" },
+                "examples": {
+                  "round1190": { "$ref": "#/components/examples/Result1190" }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "없는 회차 (아직 추첨 전이거나 범위 밖)"
+          }
+        }
+      }
+    },
+    "/results/all.json": {
+      "get": {
+        "operationId": "getAllResults",
+        "tags": ["results"],
+        "summary": "전체 회차 추첨결과",
+        "responses": {
+          "200": {
+            "description": "1회부터 최신 회차까지 회차 오름차순 배열",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": { "$ref": "#/components/schemas/Result" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/stores/{round}.json": {
+      "get": {
+        "operationId": "getFirstPrizeStoresByRound",
+        "tags": ["stores"],
+        "summary": "특정 회차 1등 당첨 판매점",
+        "description": "262회부터 제공합니다. 현재 정상 영업 중인 판매점만 포함합니다.",
+        "parameters": [
+          {
+            "name": "round",
+            "in": "path",
+            "required": true,
+            "description": "회차 (262 ~ 최신 회차)",
+            "schema": { "type": "integer", "minimum": 262 },
+            "example": 1190
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "해당 회차 1등 당첨 판매점",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/RoundStores" },
+                "examples": {
+                  "round1190": { "$ref": "#/components/examples/Stores1190" }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "없는 회차 (261회 이하, 추첨 전, 판매점 미반영)"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Result": {
+        "type": "object",
+        "description": "한 회차의 추첨결과",
+        "required": ["round", "date", "numbers", "bonus", "ranks", "firstPrizeMethods", "totalSales"],
+        "properties": {
+          "round": { "type": "integer", "description": "회차" },
+          "date": { "type": "string", "format": "date", "description": "추첨일 (YYYY-MM-DD)" },
+          "numbers": {
+            "type": "array",
+            "description": "당첨번호 6개 (오름차순)",
+            "items": { "type": "integer", "minimum": 1, "maximum": 45 },
+            "minItems": 6,
+            "maxItems": 6
+          },
+          "bonus": { "type": "integer", "minimum": 1, "maximum": 45, "description": "보너스 번호" },
+          "ranks": {
+            "type": "array",
+            "description": "1~5등 당첨 정보",
+            "items": { "$ref": "#/components/schemas/Rank" },
+            "minItems": 5,
+            "maxItems": 5
+          },
+          "firstPrizeMethods": {
+            "description": "1등 당첨 게임의 번호 선택 방식별 개수. 원본에 기록이 없는 1~261회는 null",
+            "oneOf": [{ "$ref": "#/components/schemas/FirstPrizeMethods" }, { "type": "null" }]
+          },
+          "totalSales": { "type": "integer", "description": "해당 회차 총 판매금액 (원)" }
+        }
+      },
+      "Rank": {
+        "type": "object",
+        "required": ["rank", "prize", "winners"],
+        "properties": {
+          "rank": { "type": "integer", "minimum": 1, "maximum": 5, "description": "등수" },
+          "prize": { "type": "integer", "description": "1게임당 당첨금 (원)" },
+          "winners": { "type": "integer", "description": "당첨 게임 수" }
+        }
+      },
+      "FirstPrizeMethods": {
+        "type": "object",
+        "required": ["auto", "manual", "semiAuto"],
+        "properties": {
+          "auto": { "type": "integer", "description": "자동" },
+          "manual": { "type": "integer", "description": "수동" },
+          "semiAuto": { "type": "integer", "description": "반자동" }
+        }
+      },
+      "RoundStores": {
+        "type": "object",
+        "required": ["round", "stores"],
+        "properties": {
+          "round": { "type": "integer", "description": "회차" },
+          "stores": {
+            "type": "array",
+            "description": "1등 당첨 판매점 목록",
+            "items": { "$ref": "#/components/schemas/Store" }
+          }
+        }
+      },
+      "Store": {
+        "type": "object",
+        "required": ["id", "name", "address", "region", "method", "lat", "lng"],
+        "properties": {
+          "id": { "type": "string", "description": "판매점 ID" },
+          "name": { "type": "string", "description": "상호명" },
+          "address": { "type": "string", "description": "주소" },
+          "region": { "type": "string", "description": "지역 (예: 서울, 부산)" },
+          "method": { "type": "string", "enum": ["자동", "수동", "반자동"], "description": "1등 번호 선택 방식" },
+          "lat": {
+            "description": "위도. 좌표가 없으면 빈 문자열",
+            "oneOf": [{ "type": "number" }, { "type": "string", "const": "" }]
+          },
+          "lng": {
+            "description": "경도. 좌표가 없으면 빈 문자열",
+            "oneOf": [{ "type": "number" }, { "type": "string", "const": "" }]
+          }
+        }
+      }
+    },
+    "examples": {
+      "Result1190": {
+        "summary": "1190회",
+        "value": {
+          "round": 1190,
+          "date": "2025-09-20",
+          "numbers": [7, 9, 19, 23, 26, 45],
+          "bonus": 33,
+          "ranks": [
+            { "rank": 1, "prize": 4622793813, "winners": 6 },
+            { "rank": 2, "prize": 40909680, "winners": 113 },
+            { "rank": 3, "prize": 1403825, "winners": 3293 },
+            { "rank": 4, "prize": 50000, "winners": 168764 },
+            { "rank": 5, "prize": 5000, "winners": 2752776 }
+          ],
+          "firstPrizeMethods": { "auto": 3, "manual": 3, "semiAuto": 0 },
+          "totalSales": 59184430500
+        }
+      },
+      "Stores1190": {
+        "summary": "1190회 (일부)",
+        "value": {
+          "round": 1190,
+          "stores": [
+            {
+              "id": "12600086",
+              "name": "돈벼락맞는곳",
+              "address": "부산 동구 조방로49번길 18-1",
+              "region": "부산",
+              "method": "자동",
+              "lat": 35.139161,
+              "lng": 129.05993
+            }
+          ]
+        }
+      }
+    }
+  }
+}

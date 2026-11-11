@@ -14,7 +14,7 @@ on:
   # 소개 페이지를 직접 수정해 push하면 수집 없이 배포만 한다
   push:
     branches: [main]
-    paths: ['index.html', 'policy.html', 'sitemap.xml', 'google*.html', '.github/workflows/update.yml']
+    paths: ['index.html', 'policy.html', 'sitemap.xml', 'google*.html', '*.txt', 'openapi.json', '.github/workflows/update.yml']
   workflow_dispatch:
     inputs:
       from:
@@ -98,3 +98,8 @@ jobs:
           path: .
       - id: deployment
         uses: actions/deploy-pages@v5
+
+      # 데이터가 갱신돼 문서 첫 페이지(최신 회차 영역)가 바뀐 경우만 네이버·Bing에 알린다
+      - name: IndexNow
+        if: needs.update.outputs.changed == 'true'
+        run: node scripts/indexnow.mjs
